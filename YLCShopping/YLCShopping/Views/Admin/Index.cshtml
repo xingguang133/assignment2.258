@@ -1,0 +1,195 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout-Admin.cshtml";
+}
+@section scripts{
+    <script type="text/javascript" src=" @Url.Content("~/Content/echarts.min.js")"></script>
+    <script type="text/javascript" src=" @Url.Content("~/Scripts/jquery.js")"></script>
+}
+
+<script type="text/javascript">
+    $.ajax({
+        url: "/Admin/ProductCount",
+        type: "get",
+        data: {},
+        success: function (res) {
+            var objs = []//用于存放名称
+            var obj1 = []//用于存放数量
+            var objp = []//用于存放单价
+            //var arr = [];
+            $.each(res, function (i, v) {
+                objs[i] = v.Name;
+                obj1[i] = v.Amount;
+                objp[i] = v.Price;
+            })
+            console.log("name:" + objs)
+            console.log("stocks:" + obj1)
+            // 基于准备好的dom，初始化echarts实例
+            var myChart = echarts.init(document.getElementById('main'));
+
+            // 指定图表的配置项和数据
+            var option = {
+                title: {
+                    text: 'Inventory price of listed goods'
+                },
+                tooltip: {
+                    trigger: 'axis'
+                },
+                grid: {
+                    left: '3%',
+                    right: '4%',
+                    bottom: '3%',
+                    containLabel: true
+                },
+                toolbox: {
+                    feature: {
+                        saveAsImage: {}
+                    }
+                },
+                legend: {
+                    data: ['stocks', 'price']
+                },
+                xAxis: {
+                    data: objs
+                },
+                yAxis: {
+                    type: 'value'
+                },
+                series: [{
+                    name: 'stocks',
+                    type: 'line',
+                    data: obj1,
+                    smooth: true
+                },
+                {
+                    name: 'price',
+                    type: 'line',
+                    data: objp,
+                    smooth: true
+                 }
+                ]
+            };
+            // 使用刚指定的配置项和数据显示图表。
+            myChart.setOption(option);
+        }
+    });
+
+    $.ajax({
+        url: "/Admin/ProductCate",
+        type: "get",
+        data: {},
+        success: function (res) {
+            var objss = []//用于存放名称
+            var obj11 = []//用于存放数量
+            //var arr = [];
+            $.each(res, function (i, v) {
+                objss[i] = v.Name;
+                obj11[i] = v.Count;
+            })
+            console.log("name:" + objss)
+            console.log("stocks:" + obj11)
+            // 基于准备好的dom，初始化echarts实例
+            var myChart = echarts.init(document.getElementById('main1'));
+
+            // 指定图表的配置项和数据
+            var option = {
+                title: {
+                    text: 'quantity under class'
+                },
+                tooltip: {
+                    trigger: 'axis'
+                },
+                grid: {
+                    left: '3%',
+                    right: '4%',
+                    bottom: '3%',
+                    containLabel: true
+                },
+                toolbox: {
+                    feature: {
+                        saveAsImage: {}
+                    }
+                },
+                legend: {
+                    data: ['amount']
+                },
+                xAxis: {
+                    data: objss
+                },
+                yAxis: {
+                    type: 'value',
+                    axisLabel: {
+                        formatter: '{value} things'
+                    },
+                    minInterval: 1
+                },
+                series: [{
+                    name: 'amount',
+                    type: 'bar',
+                    data: obj11,
+                    smooth: true
+                }
+                ]
+            };
+            // 使用刚指定的配置项和数据显示图表。
+            myChart.setOption(option);
+        }
+    });
+</script>
+
+<style>
+    .list-group {
+    }
+
+    #myList {
+        line-height: 50px;
+        border-radius: 0px;
+    }
+
+    .list-all {
+        height: 80px;
+        font-size: 24px;
+        background: #222D32;
+        color: white;
+        transition: all 0.3s linear;
+    }
+
+        .list-all:hover {
+            background-color: #4E5465;
+            border-left: 10px solid #e66d5a;
+            color: white;
+        }
+
+    #active {
+        border-style: none;
+        border-left: 10px solid #e66d5a;
+        background-color: #4E5465;
+    }
+
+    #sm-title {
+        width: 100%;
+        background: #F2F2F2;
+        border-left: 10px solid #17A2B8;
+        font-size: 22px;
+        padding: 10px;
+        margin-top: 25px;
+    }
+</style>
+
+<div style="width:15%;height: calc(100vh - 80px);float:left;background-color:#222d32;">
+    <div class="list-group" id="myList" role="tablist">
+        @Html.ActionLink("main page", "Index", "Admin", new { @class = "list-group-item list-group-item-action active list-all", @id = "active" })
+        @Html.ActionLink("user", "Users", "Admin", new { @class = "list-group-item list-group-item-action list-all" })
+        @Html.ActionLink("order", "Ordermanagement", "Admin", new { @class = "list-group-item list-group-item-action list-all" })
+        @Html.ActionLink("merchandise", "Products", "Admin", new { @class = "list-group-item list-group-item-action list-all" })
+        @Html.ActionLink("about", "AboutMe", "Admin", new { @class = "list-group-item list-group-item-action list-all" })
+    </div>
+</div>
+<div style="float:left;margin-left:30px;width:80%;">
+    <h2 id="sm-title">Management page, welcome administrator ---- ！</h2>
+    <br />
+    <div id="main" style="width:1400px;height:400px;"></div><!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main1" style="width:1400px;height:400px;"></div><!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+</div>
+

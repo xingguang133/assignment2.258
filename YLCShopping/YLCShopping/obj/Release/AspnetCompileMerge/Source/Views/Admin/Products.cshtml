@@ -1,0 +1,303 @@
+﻿@using PagedList
+@using PagedList.Mvc
+@model IEnumerable<YLCShopping.Models.Product>
+
+@{
+    ViewBag.Title = "商品管理";
+    Layout = "~/Views/Shared/_Layout-Admin.cshtml";
+}
+@section scripts{
+    <script type="text/javascript" src=" @Url.Content("~/Scripts/jquery.unobtrusive-ajax.js")"></script>
+}
+
+@{
+    var ajaxOption = new AjaxOptions()
+    {
+        OnSuccess = "RemoveCartSuccess",
+        OnFailure = "RemoveCartFailure",
+        Confirm = "您确定要下架该商品吗？",
+        HttpMethod = "Post"
+    };
+}
+<script type="text/javascript">
+    function RemoveCartSuccess() {
+        alert('下架成功');
+        location.reload(true);
+    }
+    function RemoveCartFailure(xhr) {
+        alert('删除失败 (HTTP 状态码: ' + xhr.status + ')');
+    }
+    function success(data) {
+        if (data == "Ok") {
+            alert('商品类别新建成功');
+            location.reload(true);
+        }
+        else {
+            alert('商品类别已经存在')
+        }
+        
+    }
+    function successedit(data) {
+        if (data == "ok") {
+            alert('商品类别修改成功');
+        }
+        alert('输入类别存在');
+    }
+    function successa(data) {
+        if (data == "ok") {
+            alert('商品类别删除成功');
+        }
+        alert('输入类别删除失败，类别存在商品');
+    }
+</script>
+
+<style>
+    #yyk a{
+        color:white;
+    }
+    #myList {
+        line-height: 50px;
+        border-radius: 0px;
+    }
+
+    .list-all {
+        height: 80px;
+        font-size: 24px;
+        background: #222D32;
+        color: white;
+        transition: all 0.3s linear;
+    }
+
+        .list-all:hover {
+            background-color: #4E5465;
+            border-left: 10px solid #e66d5a;
+            color: white;
+        }
+
+    #active {
+        border-style: none;
+        border-left: 10px solid #e66d5a;
+        background-color: #4E5465;
+    }
+
+    #sm-title {
+        width: 100%;
+        background: #F2F2F2;
+        border-left: 10px solid #17A2B8;
+        font-size: 22px;
+        padding: 10px;
+        margin-top: 25px;
+    }
+
+    #button-delete {
+        color: white;
+    }
+
+        #button-delete:link {
+            color: white;
+        }
+
+        #button-delete:visited {
+            color: white;
+        }
+
+    #yyk button:hover {
+        color: white;
+    }
+</style>
+
+<div style="width:15%;height: calc(100vh - 80px);float:left;background-color:#222d32;">
+    <div class="list-group" id="myList" role="tablist">
+        @Html.ActionLink("主页", "Index", "Admin", new { @class = "list-group-item list-group-item-action list-all" })
+        @Html.ActionLink("用户管理", "Users", "Admin", new { @class = "list-group-item list-group-item-action list-all" })
+        @Html.ActionLink("订单管理", "Ordermanagement", "Admin", new { @class = "list-group-item list-group-item-action list-all" })
+        @Html.ActionLink("商品管理", "Products", "Admin", new { @class = "list-group-item list-group-item-action  active list-all", @id = "active" })
+        @Html.ActionLink("关于", "AboutMe", "Admin", new { @class = "list-group-item list-group-item-action list-all" })
+    </div>
+</div>
+<div style="float:left;margin-left:30px;width:80%;">
+    <div class="tab-content" id="myTabContent">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">所有商品</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">商品类别管理</a>
+            </li>
+        </ul>
+        <div class="tab-pane fade show active overflow-auto " id="home" role="tabpanel" aria-labelledby="home-tab">
+            <h2 id="sm-title">商品管理</h2>
+            @using (Html.BeginForm("Products", "Admin"))
+            {
+                <div class="d-flex" style="float:right;width: 350px">
+                    <div class="form-group mx-sm-3 mb-2">
+                        <input name="product" class="form-control" id="input" placeholder="输入商品名称/制造商">
+                    </div>
+                    <button type="submit" class="btn btn-info mb-2">搜索</button>
+                </div>
+            }
+            <a href="AdminProductCreate" class="btn btn-info" style="margin-bottom: 20px;margin-right: 20px;margin-top: 20px;">添加商品</a>
+            <a href="Products" class="btn btn-info" style="margin-bottom: 20px;margin-right: 20px;margin-top: 20px;">查看所有</a>
+            <div class="pre-scrollable" style="max-height:550px">
+                <table class="table table-striped ">
+                    <tr>
+                        <th>
+                            商品图片
+                        </th>
+                        <th>
+                            商品名称
+                        </th>
+                        <th>
+                            商品类别
+                        </th>
+                        <th>
+                            商品简介
+                        </th>
+                        <th>
+                            制造商
+                        </th>
+                        <th>
+                            商品单价
+                        </th>
+                        <th>
+                            库存
+                        </th>
+                        <th>
+                            上架日期
+                        </th>
+                        <th>
+                            操作
+                        </th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+
+                        <tr>
+                            <td>
+                                @if (item.ImageData != null)
+                                {
+                                    <div class="pull-left" style="margin-right: 10px">
+                                        <img class="img-thumbnail" width="75" height="75"
+                                             src="@Url.Action("GetImage", "Home",
+                new { item.Id })" />
+                                    </div>
+                                }
+                                else
+                                {
+                                    @Html.Label("暂无图片");
+                                }
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Name)
+                            </td>
+
+                            <td>
+                                @(item.ProductCategory.Name)
+                            </td>
+                            <td class="d-inline-block text-truncate" style="max-width: 200px;">
+                                @Html.DisplayFor(modelItem => item.Description)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Made)
+                            </td>
+                            <td>
+                                ¥  @Html.DisplayFor(modelItem => item.Price)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Amount)/件
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PublishOn)
+                            </td>
+                            <td>
+                                @Html.ActionLink("修改", "AdminProductEdit", new { id = item.Id }) ||
+                                @Ajax.ActionLink("下架", "AdminProduvtDelete", new { id = item.Id }, ajaxOption)
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+
+            </div>
+            <link href="~/Content/PagedList.css" rel="stylesheet" />
+            @{
+                var data = Model as IPagedList<YLCShopping.Models.Product>;
+            }
+            @data.Count / @data.PageSize 条记录，共 @data.PageCount 页，当前第 @data.PageNumber 页
+            @Html.PagedListPager(list: data, generatePageUrl: page => Url.Action("Products", new { p = page }))
+        </div>
+        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <h2 id="sm-title">商品类别管理</h2>
+            <a class="btn btn-info" role="button" data-target="#myModal" data-toggle="modal">
+                新建
+            </a>
+            <!--fade 淡入淡出-->
+            <div class="modal fade" id="myModal" aria-labelledby="myModallabel" aria-hidden="true" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="myModallabel">新建商品类别</h5>
+                        </div>
+                        @using (Ajax.BeginForm("AdminProductPPCreate", "Admin", new AjaxOptions
+                        {
+                            HttpMethod = "Post",
+                            OnSuccess = "success"
+
+                        }))
+                        {
+
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <div class="col-lg-9">
+                                        <input type="text" value="" name="PPCreate" placeholder="输入类别名称点击保存即可" class="form-control">
+                                        <br />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-default" type="button" data-dismiss="modal">关闭</button>
+                                <button class="btn btn-success" type="submit" onclick="">保存</button>
+                            </div>
+                        }
+
+                    </div>
+                </div>
+            </div>
+            <p>点击商品类别就可删除（类别下有商品不允许删除）</p>
+            @foreach (var item in (IEnumerable<YLCShopping.Models.ProductCategory>)ViewData["Productpp2"])
+            {
+                @*<div style="background-color: #f3f0e9;width: 300px;float:left;text-align:center;height: 60px;line-height: 60px;border-radius: 20px; margin-bottom:5px; margin-left:10px;">*@
+                <div style="width: 300px;float:left;margin-bottom:5px; margin-left:10px;">
+                    @using (Ajax.BeginForm("AdminProductPPEtdit", "Admin", new { id = item.Id }, new AjaxOptions
+                    {
+                        HttpMethod = "Post",
+                        OnSuccess = "successedit"
+
+                    }))
+                    {
+                        <div class="input-group mb-3">
+                            <input type="text" name="ppid" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2" value="@item.Name">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="submit" id="button-addon2" style="background:#5E6264;color:white;">修改</button>
+                            </div>
+                            <div class="input-group-append" id="yyk">
+                                <button class="btn " type="button" id="button-addon2 button-delete" style="background:#e66d5a;">
+                                    @Ajax.ActionLink("删除", "AdminProductPPDelete",new{ id = item.Id},new AjaxOptions {
+                                   Confirm = "您确定要下架该商品分类吗？",
+                                   HttpMethod = "Post",
+                                   OnSuccess = "successa"
+                               })
+                                </button>
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+
+
+

@@ -1,0 +1,846 @@
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\YLCShopping.dll.config
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\YLCShopping.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\YLCShopping.pdb
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\roslyn\csc.exe
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\roslyn\csc.exe.config
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\roslyn\csc.rsp
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\roslyn\csi.exe
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\roslyn\csi.exe.config
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\roslyn\csi.rsp
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\roslyn\Microsoft.Managed.Core.targets
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\roslyn\System.AppContext.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\roslyn\System.Collections.Immutable.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\roslyn\System.Console.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\roslyn\System.IO.Compression.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\roslyn\System.IO.FileSystem.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\roslyn\System.IO.Pipes.AccessControl.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\roslyn\System.IO.Pipes.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\roslyn\System.Reflection.Metadata.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\roslyn\System.Security.AccessControl.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\roslyn\System.Security.Claims.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\roslyn\System.Security.Principal.Windows.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\roslyn\System.ValueTuple.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\roslyn\System.Xml.XmlDocument.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\roslyn\System.Xml.XPath.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\roslyn\vbc.exe
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\roslyn\vbc.exe.config
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\roslyn\vbc.rsp
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\roslyn\VBCSCompiler.exe
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\roslyn\VBCSCompiler.exe.config
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\Antlr3.Runtime.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\EntityFramework.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\EntityFramework.SqlServer.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\Microsoft.Web.Infrastructure.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\Newtonsoft.Json.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\PagedList.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\PagedList.Mvc.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\System.Web.Helpers.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\System.Web.Mvc.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\System.Web.Optimization.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\System.Web.Razor.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\System.Web.WebPages.Deployment.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\System.Web.WebPages.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\System.Web.WebPages.Razor.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\WebGrease.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\EntityFramework.xml
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\EntityFramework.SqlServer.xml
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\PagedList.xml
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\PagedList.Mvc.xml
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\System.Web.Helpers.xml
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\System.Web.Razor.xml
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\System.Web.WebPages.xml
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\System.Web.WebPages.Deployment.xml
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\System.Web.WebPages.Razor.xml
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\System.Web.Mvc.xml
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\System.Web.Optimization.xml
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\Newtonsoft.Json.xml
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\Antlr3.Runtime.pdb
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\zh-Hans\System.Web.Helpers.resources.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\zh-Hans\System.Web.Razor.resources.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\zh-Hans\System.Web.WebPages.resources.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\zh-Hans\System.Web.Mvc.resources.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\bin\zh-Hans\System.Web.Optimization.resources.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\obj\Debug\YLCShopping.csprojAssemblyReference.cache
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\obj\Debug\YLCShopping.Migrations.createdb.resources
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\obj\Debug\YLCShopping.csproj.GenerateResource.cache
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\obj\Debug\YLCShopping.csproj.CoreCompileInputs.cache
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\obj\Debug\YLCShopping.csproj.CopyComplete
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\obj\Debug\YLCShopping.dll
+E:\ASP.NET\YLCShopping -4.2\YLCShopping\obj\Debug\YLCShopping.pdb
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\YLCShopping.dll.config
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\YLCShopping.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\YLCShopping.pdb
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\roslyn\csc.exe
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\roslyn\csc.exe.config
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\roslyn\csc.rsp
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\roslyn\csi.exe
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\roslyn\csi.exe.config
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\roslyn\csi.rsp
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\roslyn\Microsoft.Managed.Core.targets
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\roslyn\System.AppContext.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\roslyn\System.Collections.Immutable.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\roslyn\System.Console.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\roslyn\System.Diagnostics.StackTrace.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\roslyn\System.IO.Compression.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\roslyn\System.IO.FileSystem.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\roslyn\System.IO.FileSystem.Primitives.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\roslyn\System.IO.Pipes.AccessControl.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\roslyn\System.IO.Pipes.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\roslyn\System.Reflection.Metadata.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\roslyn\System.Security.AccessControl.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\roslyn\System.Security.Claims.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\roslyn\System.Security.Cryptography.Encoding.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\roslyn\System.Security.Cryptography.Primitives.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\roslyn\System.Security.Principal.Windows.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\roslyn\System.Text.Encoding.CodePages.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\roslyn\System.ValueTuple.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\roslyn\System.Xml.ReaderWriter.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\roslyn\System.Xml.XmlDocument.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\roslyn\System.Xml.XPath.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\roslyn\System.Xml.XPath.XDocument.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\roslyn\vbc.exe
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\roslyn\vbc.exe.config
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\roslyn\vbc.rsp
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\roslyn\VBCSCompiler.exe
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\roslyn\VBCSCompiler.exe.config
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\Antlr3.Runtime.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\EntityFramework.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\EntityFramework.SqlServer.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\Microsoft.Web.Infrastructure.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\Newtonsoft.Json.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\PagedList.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\PagedList.Mvc.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\System.Web.Helpers.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\System.Web.Mvc.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\System.Web.Optimization.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\System.Web.Razor.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\System.Web.WebPages.Deployment.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\System.Web.WebPages.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\System.Web.WebPages.Razor.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\WebGrease.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\EntityFramework.xml
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\EntityFramework.SqlServer.xml
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\PagedList.xml
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\PagedList.Mvc.xml
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\System.Web.Helpers.xml
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\System.Web.Razor.xml
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\System.Web.WebPages.xml
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\System.Web.WebPages.Deployment.xml
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\System.Web.WebPages.Razor.xml
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\System.Web.Mvc.xml
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\System.Web.Optimization.xml
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\Newtonsoft.Json.xml
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\Antlr3.Runtime.pdb
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\zh-Hans\System.Web.Helpers.resources.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\zh-Hans\System.Web.Razor.resources.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\zh-Hans\System.Web.WebPages.resources.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\zh-Hans\System.Web.Mvc.resources.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\bin\zh-Hans\System.Web.Optimization.resources.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\obj\Debug\YLCShopping.csprojAssemblyReference.cache
+F:\毕设\YLCShopping -4.5\YLCShopping\obj\Debug\YLCShopping.Migrations.createdb.resources
+F:\毕设\YLCShopping -4.5\YLCShopping\obj\Debug\YLCShopping.csproj.GenerateResource.cache
+F:\毕设\YLCShopping -4.5\YLCShopping\obj\Debug\YLCShopping.csproj.CoreCompileInputs.cache
+F:\毕设\YLCShopping -4.5\YLCShopping\obj\Debug\YLCShopping.csproj.CopyComplete
+F:\毕设\YLCShopping -4.5\YLCShopping\obj\Debug\YLCShopping.dll
+F:\毕设\YLCShopping -4.5\YLCShopping\obj\Debug\YLCShopping.pdb
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\YLCShopping.dll.config
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\YLCShopping.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\YLCShopping.pdb
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\roslyn\csc.exe
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\roslyn\csc.exe.config
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\roslyn\csc.rsp
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\roslyn\csi.exe
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\roslyn\csi.exe.config
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\roslyn\csi.rsp
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\roslyn\Microsoft.Managed.Core.targets
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\roslyn\System.AppContext.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\roslyn\System.Collections.Immutable.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\roslyn\System.Console.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\roslyn\System.Diagnostics.StackTrace.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\roslyn\System.IO.Compression.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\roslyn\System.IO.FileSystem.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\roslyn\System.IO.FileSystem.Primitives.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\roslyn\System.IO.Pipes.AccessControl.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\roslyn\System.IO.Pipes.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\roslyn\System.Reflection.Metadata.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\roslyn\System.Security.AccessControl.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\roslyn\System.Security.Claims.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\roslyn\System.Security.Cryptography.Encoding.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\roslyn\System.Security.Cryptography.Primitives.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\roslyn\System.Security.Principal.Windows.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\roslyn\System.Text.Encoding.CodePages.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\roslyn\System.ValueTuple.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\roslyn\System.Xml.ReaderWriter.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\roslyn\System.Xml.XmlDocument.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\roslyn\System.Xml.XPath.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\roslyn\System.Xml.XPath.XDocument.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\roslyn\vbc.exe
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\roslyn\vbc.exe.config
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\roslyn\vbc.rsp
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\roslyn\VBCSCompiler.exe
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\roslyn\VBCSCompiler.exe.config
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\Antlr3.Runtime.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\EntityFramework.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\EntityFramework.SqlServer.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\Microsoft.Web.Infrastructure.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\Newtonsoft.Json.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\PagedList.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\PagedList.Mvc.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\System.Web.Helpers.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\System.Web.Mvc.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\System.Web.Optimization.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\System.Web.Razor.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\System.Web.WebPages.Deployment.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\System.Web.WebPages.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\System.Web.WebPages.Razor.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\WebGrease.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\EntityFramework.xml
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\EntityFramework.SqlServer.xml
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\PagedList.xml
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\PagedList.Mvc.xml
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\System.Web.Helpers.xml
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\System.Web.Razor.xml
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\System.Web.WebPages.xml
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\System.Web.WebPages.Deployment.xml
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\System.Web.WebPages.Razor.xml
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\System.Web.Mvc.xml
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\System.Web.Optimization.xml
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\Newtonsoft.Json.xml
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\Antlr3.Runtime.pdb
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\zh-Hans\System.Web.Helpers.resources.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\zh-Hans\System.Web.Razor.resources.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\zh-Hans\System.Web.WebPages.resources.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\zh-Hans\System.Web.Mvc.resources.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\bin\zh-Hans\System.Web.Optimization.resources.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\obj\Debug\YLCShopping.csprojAssemblyReference.cache
+F:\毕设\YLCShopping -5.0\YLCShopping\obj\Debug\YLCShopping.Migrations.createdb.resources
+F:\毕设\YLCShopping -5.0\YLCShopping\obj\Debug\YLCShopping.csproj.GenerateResource.cache
+F:\毕设\YLCShopping -5.0\YLCShopping\obj\Debug\YLCShopping.csproj.CoreCompileInputs.cache
+F:\毕设\YLCShopping -5.0\YLCShopping\obj\Debug\YLCShopping.csproj.CopyComplete
+F:\毕设\YLCShopping -5.0\YLCShopping\obj\Debug\YLCShopping.dll
+F:\毕设\YLCShopping -5.0\YLCShopping\obj\Debug\YLCShopping.pdb
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\YLCShopping.dll.config
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\YLCShopping.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\YLCShopping.pdb
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\roslyn\csc.exe
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\roslyn\csc.exe.config
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\roslyn\csc.rsp
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\roslyn\csi.exe
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\roslyn\csi.exe.config
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\roslyn\csi.rsp
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\roslyn\System.AppContext.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\roslyn\System.Console.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\roslyn\System.IO.Compression.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\roslyn\System.IO.Pipes.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\roslyn\System.Security.Claims.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\roslyn\System.ValueTuple.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\roslyn\System.Xml.XPath.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\roslyn\vbc.exe
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\roslyn\vbc.exe.config
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\roslyn\vbc.rsp
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\roslyn\VBCSCompiler.exe
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\Antlr3.Runtime.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\EntityFramework.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\EntityFramework.SqlServer.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\Newtonsoft.Json.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\PagedList.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\PagedList.Mvc.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\System.Web.Helpers.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\System.Web.Mvc.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\System.Web.Optimization.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\System.Web.Razor.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\System.Web.WebPages.Deployment.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\System.Web.WebPages.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\System.Web.WebPages.Razor.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\WebGrease.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\EntityFramework.xml
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\EntityFramework.SqlServer.xml
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\PagedList.xml
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\PagedList.Mvc.xml
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\System.Web.Helpers.xml
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\System.Web.Razor.xml
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\System.Web.WebPages.xml
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\System.Web.WebPages.Deployment.xml
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\System.Web.WebPages.Razor.xml
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\System.Web.Mvc.xml
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\System.Web.Optimization.xml
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\Newtonsoft.Json.xml
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\Antlr3.Runtime.pdb
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\zh-Hans\System.Web.Helpers.resources.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\zh-Hans\System.Web.Razor.resources.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\zh-Hans\System.Web.WebPages.resources.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\zh-Hans\System.Web.Mvc.resources.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\bin\zh-Hans\System.Web.Optimization.resources.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\obj\Debug\YLCShopping.csprojAssemblyReference.cache
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\obj\Debug\YLCShopping.Migrations.createdb.resources
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\obj\Debug\YLCShopping.csproj.GenerateResource.cache
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\obj\Debug\YLCShopping.csproj.CoreCompileInputs.cache
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\obj\Debug\YLCShopping.csproj.CopyComplete
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\obj\Debug\YLCShopping.dll
+C:\Users\GPC\Desktop\毕业设计\YLCShopping -5.1（新建商品类别BUG修改）\YLCShopping\obj\Debug\YLCShopping.pdb
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\YLCShopping.dll.config
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\YLCShopping.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\YLCShopping.pdb
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\roslyn\csc.exe
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\roslyn\csc.exe.config
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\roslyn\csc.rsp
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\roslyn\csi.exe
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\roslyn\csi.exe.config
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\roslyn\csi.rsp
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\roslyn\System.AppContext.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\roslyn\System.Console.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\roslyn\System.IO.Compression.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\roslyn\System.IO.Pipes.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\roslyn\System.Security.Claims.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\roslyn\System.ValueTuple.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\roslyn\System.Xml.XPath.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\roslyn\vbc.exe
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\roslyn\vbc.exe.config
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\roslyn\vbc.rsp
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\roslyn\VBCSCompiler.exe
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\Antlr3.Runtime.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\EntityFramework.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\EntityFramework.SqlServer.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\Newtonsoft.Json.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\PagedList.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\PagedList.Mvc.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\System.Web.Helpers.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\System.Web.Mvc.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\System.Web.Optimization.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\System.Web.Razor.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\System.Web.WebPages.Deployment.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\System.Web.WebPages.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\System.Web.WebPages.Razor.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\WebGrease.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\EntityFramework.xml
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\EntityFramework.SqlServer.xml
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\PagedList.xml
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\PagedList.Mvc.xml
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\System.Web.Helpers.xml
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\System.Web.Razor.xml
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\System.Web.WebPages.xml
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\System.Web.WebPages.Deployment.xml
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\System.Web.WebPages.Razor.xml
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\System.Web.Mvc.xml
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\System.Web.Optimization.xml
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\Newtonsoft.Json.xml
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\Antlr3.Runtime.pdb
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\zh-Hans\System.Web.Helpers.resources.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\zh-Hans\System.Web.Razor.resources.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\zh-Hans\System.Web.WebPages.resources.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\zh-Hans\System.Web.Mvc.resources.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\bin\zh-Hans\System.Web.Optimization.resources.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\obj\Debug\YLCShopping.Migrations.createdb.resources
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\obj\Debug\YLCShopping.csproj.GenerateResource.cache
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\obj\Debug\YLCShopping.csproj.CoreCompileInputs.cache
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\obj\Debug\YLCShopping.csproj.CopyComplete
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\obj\Debug\YLCShopping.dll
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\obj\Debug\YLCShopping.pdb
+C:\Users\lulin\Desktop\YLCShopping -5.2（完善UI）(1)\YLCShopping\obj\Debug\YLCShopping.csprojAssemblyReference.cache
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\YLCShopping.dll.config
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\YLCShopping.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\YLCShopping.pdb
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\csc.exe
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\csc.exe.config
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\csc.rsp
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\csi.exe
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\csi.exe.config
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\csi.rsp
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\System.AppContext.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\System.Console.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\System.IO.Compression.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\System.IO.Pipes.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\System.Security.Claims.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\System.ValueTuple.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\System.Xml.XPath.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\vbc.exe
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\vbc.exe.config
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\vbc.rsp
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\VBCSCompiler.exe
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\Antlr3.Runtime.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\EntityFramework.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\EntityFramework.SqlServer.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\Newtonsoft.Json.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\PagedList.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\PagedList.Mvc.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\System.Web.Helpers.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\System.Web.Mvc.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\System.Web.Optimization.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\System.Web.Razor.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\System.Web.WebPages.Deployment.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\System.Web.WebPages.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\System.Web.WebPages.Razor.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\WebGrease.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\EntityFramework.xml
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\EntityFramework.SqlServer.xml
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\PagedList.xml
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\PagedList.Mvc.xml
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\System.Web.Helpers.xml
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\System.Web.Razor.xml
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\System.Web.WebPages.xml
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\System.Web.WebPages.Deployment.xml
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\System.Web.WebPages.Razor.xml
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\System.Web.Mvc.xml
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\System.Web.Optimization.xml
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\Newtonsoft.Json.xml
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\Antlr3.Runtime.pdb
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\zh-Hans\System.Web.Helpers.resources.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\zh-Hans\System.Web.Razor.resources.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\zh-Hans\System.Web.WebPages.resources.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\zh-Hans\System.Web.Mvc.resources.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\zh-Hans\System.Web.Optimization.resources.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\obj\Debug\YLCShopping.csproj.AssemblyReference.cache
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\obj\Debug\YLCShopping.Migrations.createdb.resources
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\obj\Debug\YLCShopping.csproj.GenerateResource.cache
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\obj\Debug\YLCShopping.csproj.CoreCompileInputs.cache
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\obj\Debug\YLCShopping.csproj.CopyComplete
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\obj\Debug\YLCShopping.dll
+C:\Users\86198\Desktop\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\obj\Debug\YLCShopping.pdb
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\YLCShopping.dll.config
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\YLCShopping.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\YLCShopping.pdb
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\csc.exe
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\csc.exe.config
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\csc.rsp
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\csi.exe
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\csi.exe.config
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\csi.rsp
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\Microsoft.Managed.Core.targets
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\System.AppContext.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\System.Collections.Immutable.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\System.Console.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\System.IO.Compression.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\System.IO.FileSystem.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\System.IO.Pipes.AccessControl.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\System.IO.Pipes.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\System.Reflection.Metadata.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\System.Security.AccessControl.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\System.Security.Claims.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\System.Security.Principal.Windows.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\System.ValueTuple.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\System.Xml.XmlDocument.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\System.Xml.XPath.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\vbc.exe
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\vbc.exe.config
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\vbc.rsp
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\VBCSCompiler.exe
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\roslyn\VBCSCompiler.exe.config
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\Antlr3.Runtime.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\EntityFramework.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\EntityFramework.SqlServer.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\Microsoft.Web.Infrastructure.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\Newtonsoft.Json.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\PagedList.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\PagedList.Mvc.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\System.Web.Helpers.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\System.Web.Mvc.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\System.Web.Optimization.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\System.Web.Razor.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\System.Web.WebPages.Deployment.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\System.Web.WebPages.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\System.Web.WebPages.Razor.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\WebGrease.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\EntityFramework.xml
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\EntityFramework.SqlServer.xml
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\PagedList.xml
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\PagedList.Mvc.xml
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\System.Web.Helpers.xml
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\System.Web.Razor.xml
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\System.Web.WebPages.xml
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\System.Web.WebPages.Deployment.xml
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\System.Web.WebPages.Razor.xml
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\System.Web.Mvc.xml
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\System.Web.Optimization.xml
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\Newtonsoft.Json.xml
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\Antlr3.Runtime.pdb
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\zh-Hans\System.Web.Helpers.resources.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\zh-Hans\System.Web.Razor.resources.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\zh-Hans\System.Web.WebPages.resources.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\zh-Hans\System.Web.Mvc.resources.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\zh-Hans\System.Web.Optimization.resources.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\obj\Debug\YLCShopping.Migrations.createdb.resources
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\obj\Debug\YLCShopping.csproj.GenerateResource.cache
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\obj\Debug\YLCShopping.csproj.CoreCompileInputs.cache
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\obj\Debug\YLCShopping.csproj.CopyComplete
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\obj\Debug\YLCShopping.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\obj\Debug\YLCShopping.pdb
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\App_Data\MemberRegisterEMailTemplate.htm
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\favicon.ico
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\bin\Content\Images\Logo.png
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping-源文件\YLCShopping\obj\Debug\YLCShopping.csproj.AssemblyReference.cache
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\App_Data\MemberRegisterEMailTemplate.htm
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\Content\Images\Logo.png
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\favicon.ico
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\YLCShopping.dll.config
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\YLCShopping.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\YLCShopping.pdb
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\roslyn\csc.exe
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\roslyn\csc.exe.config
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\roslyn\csc.rsp
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\roslyn\csi.exe
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\roslyn\csi.exe.config
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\roslyn\csi.rsp
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\roslyn\Microsoft.Managed.Core.targets
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\roslyn\System.AppContext.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\roslyn\System.Collections.Immutable.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\roslyn\System.Console.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\roslyn\System.IO.Compression.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\roslyn\System.IO.FileSystem.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\roslyn\System.IO.Pipes.AccessControl.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\roslyn\System.IO.Pipes.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\roslyn\System.Reflection.Metadata.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\roslyn\System.Security.AccessControl.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\roslyn\System.Security.Claims.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\roslyn\System.Security.Principal.Windows.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\roslyn\System.ValueTuple.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\roslyn\System.Xml.XmlDocument.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\roslyn\System.Xml.XPath.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\roslyn\vbc.exe
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\roslyn\vbc.exe.config
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\roslyn\vbc.rsp
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\roslyn\VBCSCompiler.exe
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\roslyn\VBCSCompiler.exe.config
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\Antlr3.Runtime.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\EntityFramework.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\EntityFramework.SqlServer.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\Microsoft.Web.Infrastructure.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\Newtonsoft.Json.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\PagedList.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\PagedList.Mvc.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\System.Web.Helpers.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\System.Web.Mvc.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\System.Web.Optimization.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\System.Web.Razor.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\System.Web.WebPages.Deployment.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\System.Web.WebPages.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\System.Web.WebPages.Razor.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\WebGrease.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\EntityFramework.xml
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\EntityFramework.SqlServer.xml
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\PagedList.xml
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\PagedList.Mvc.xml
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\System.Web.Helpers.xml
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\System.Web.Razor.xml
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\System.Web.WebPages.xml
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\System.Web.WebPages.Deployment.xml
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\System.Web.WebPages.Razor.xml
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\System.Web.Mvc.xml
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\System.Web.Optimization.xml
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\Newtonsoft.Json.xml
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\Antlr3.Runtime.pdb
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\zh-Hans\System.Web.Helpers.resources.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\zh-Hans\System.Web.Razor.resources.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\zh-Hans\System.Web.WebPages.resources.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\zh-Hans\System.Web.Mvc.resources.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\bin\zh-Hans\System.Web.Optimization.resources.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\obj\Debug\YLCShopping.csproj.AssemblyReference.cache
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\obj\Debug\YLCShopping.Migrations.createdb.resources
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\obj\Debug\YLCShopping.csproj.GenerateResource.cache
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\obj\Debug\YLCShopping.csproj.CoreCompileInputs.cache
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\obj\Debug\YLCShopping.csproj.CopyComplete
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\obj\Debug\YLCShopping.dll
+E:\大三毕业设计\基于ASP.NET+MVC+的商品管理系统\YLCShopping\YLCShopping\obj\Debug\YLCShopping.pdb
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\App_Data\MemberRegisterEMailTemplate.htm
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\Content\Images\Logo.png
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\favicon.ico
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\YLCShopping.dll.config
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\YLCShopping.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\YLCShopping.pdb
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\roslyn\csc.exe
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\roslyn\csc.exe.config
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\roslyn\csc.rsp
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\roslyn\csi.exe
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\roslyn\csi.exe.config
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\roslyn\csi.rsp
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\roslyn\Microsoft.Managed.Core.targets
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\roslyn\System.AppContext.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\roslyn\System.Collections.Immutable.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\roslyn\System.Console.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\roslyn\System.IO.Compression.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\roslyn\System.IO.FileSystem.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\roslyn\System.IO.Pipes.AccessControl.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\roslyn\System.IO.Pipes.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\roslyn\System.Reflection.Metadata.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\roslyn\System.Security.AccessControl.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\roslyn\System.Security.Claims.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\roslyn\System.Security.Principal.Windows.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\roslyn\System.ValueTuple.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\roslyn\System.Xml.XmlDocument.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\roslyn\System.Xml.XPath.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\roslyn\vbc.exe
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\roslyn\vbc.exe.config
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\roslyn\vbc.rsp
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\roslyn\VBCSCompiler.exe
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\roslyn\VBCSCompiler.exe.config
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\Antlr3.Runtime.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\EntityFramework.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\EntityFramework.SqlServer.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\Microsoft.Web.Infrastructure.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\Newtonsoft.Json.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\PagedList.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\PagedList.Mvc.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\System.Web.Helpers.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\System.Web.Mvc.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\System.Web.Optimization.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\System.Web.Razor.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\System.Web.WebPages.Deployment.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\System.Web.WebPages.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\System.Web.WebPages.Razor.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\WebGrease.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\EntityFramework.xml
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\EntityFramework.SqlServer.xml
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\PagedList.xml
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\PagedList.Mvc.xml
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\System.Web.Helpers.xml
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\System.Web.Razor.xml
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\System.Web.WebPages.xml
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\System.Web.WebPages.Deployment.xml
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\System.Web.WebPages.Razor.xml
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\System.Web.Mvc.xml
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\System.Web.Optimization.xml
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\Newtonsoft.Json.xml
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\Antlr3.Runtime.pdb
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\zh-Hans\System.Web.Helpers.resources.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\zh-Hans\System.Web.Razor.resources.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\zh-Hans\System.Web.WebPages.resources.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\zh-Hans\System.Web.Mvc.resources.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\bin\zh-Hans\System.Web.Optimization.resources.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\obj\Debug\YLCShopping.csproj.AssemblyReference.cache
+E:\桌面文件\132\YLCShopping\YLCShopping\obj\Debug\YLCShopping.Migrations.createdb.resources
+E:\桌面文件\132\YLCShopping\YLCShopping\obj\Debug\YLCShopping.csproj.GenerateResource.cache
+E:\桌面文件\132\YLCShopping\YLCShopping\obj\Debug\YLCShopping.csproj.CoreCompileInputs.cache
+E:\桌面文件\132\YLCShopping\YLCShopping\obj\Debug\YLCShopping.csproj.CopyComplete
+E:\桌面文件\132\YLCShopping\YLCShopping\obj\Debug\YLCShopping.dll
+E:\桌面文件\132\YLCShopping\YLCShopping\obj\Debug\YLCShopping.pdb

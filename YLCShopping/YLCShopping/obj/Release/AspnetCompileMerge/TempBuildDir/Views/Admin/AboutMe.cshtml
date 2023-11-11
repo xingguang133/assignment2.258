@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewBag.Title = "AboutMe";
+    Layout = "~/Views/Shared/_Layout-Admin.cshtml";
+}
+<style>
+    .list-group {
+    }
+
+    #myList {
+        line-height: 50px;
+        border-radius: 0px;
+    }
+
+    .list-all {
+        height: 80px;
+        font-size: 24px;
+        background: #222D32;
+        color: white;
+        transition: all 0.3s linear;
+    }
+
+        .list-all:hover {
+            background-color: #4E5465;
+            border-left: 10px solid #e66d5a;
+            color: white;
+        }
+
+    #active {
+        border-style: none;
+        border-left: 10px solid #e66d5a;
+        background-color: #4E5465;
+    }
+
+    #sm-title {
+        width: 100%;
+        background: #F2F2F2;
+        border-left: 10px solid #17A2B8;
+        font-size: 22px;
+        padding: 10px;
+        margin-top: 25px;
+    }
+</style>
+<div style="width:15%;height: calc(100vh - 80px);float:left;background-color:#222d32;">
+    <div class="list-group" id="myList" role="tablist">
+        @Html.ActionLink("主页", "Index", "Admin", new { @class = "list-group-item list-group-item-action list-all" })
+        @Html.ActionLink("用户管理", "Users", "Admin", new { @class = "list-group-item list-group-item-action list-all" })
+        @Html.ActionLink("订单管理", "Ordermanagement", "Admin", new { @class = "list-group-item list-group-item-action list-all" })
+        @Html.ActionLink("商品管理", "Products", "Admin", new { @class = "list-group-item list-group-item-action list-all" })
+        @Html.ActionLink("关于", "AboutMe", "Admin", new { @class = "list-group-item list-group-item-action active list-all", @id = "active" })
+    </div>
+</div>
+<div style="float:left;margin-left:30px;width:80%;">
+  <h2 id="sm-title">关于我们</h2>
+    <br />
+  <h2>这是一个关于商品管理系统的后端</h2>
+</div>
+

@@ -1,0 +1,207 @@
+﻿@using PagedList
+@using PagedList.Mvc
+@model IEnumerable<YLCShopping.Models.Product>
+@section scripts{
+    <script type="text/javascript" src=" @Url.Content("~/Scripts/jquery.unobtrusive-ajax.js")"></script>
+}
+
+@{
+    var ajaxOption = new AjaxOptions()
+    {
+        OnSuccess = "AddToCartSuccess",
+        OnFailure = "AddToCartFailure",
+        HttpMethod = "Post"
+    };
+}
+<script type="text/javascript">
+    function AddToCartSuccess() {
+        alert('Add to cart successfully');
+    }
+    function AddToCartFailure(xhr) {
+        alert('Failed to add to cart (HTTP status code: ' + xhr.status + ')');
+    }
+    function MTC(rt) {
+        rt.style.backgroundColor = "#00BFFF";
+    }
+    function mtc2(mt) {
+        mt.style.backgroundColor = "white";
+    }
+</script>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="height:60px;">
+        <a class="navbar-brand" href="Index" style="width:180px;font-size:30px;">【bowl buying】</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll" style="max-height: 100px;">
+                <li class="nav-item">
+                    &nbsp &nbsp@*
+        @if (User.Identity.IsAuthenticated)
+        {
+            int id = (int)Session["memberid"];
+            <div class="nav-link" style="width:330px;">
+                @if (id != 0)
+                {
+                    <img onclick="location.href = '@Url.Action("Index","AboutMember")';" class="img-circle image-responsive" style="float:left;margin-right:5px; width:40px;height:40px;margin-top:0px;border-radius:50%;cursor:pointer;" src="@Url.Action("GetImage", "Member",new { id })" />
+                }
+                else
+                {
+                    <img onclick="location.href = '@Url.Action("Index","AboutMember")';" class="img-circle image-responsive " style="float: left; width: 64px; height: 64px; margin-top: 0px; cursor: pointer;" src="~/Content/Images/Logo.png" />
+                }
+
+                <div class="dropdown" style="float:left;margin-top:0px;">
+                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false">
+                        <span  style="cursor: pointer;"> hello，@Session["name"] </span>&nbsp;
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="/AboutMember/Index">manual center</a>
+                        <a class="dropdown-item" role="button" data-target="#myModal" data-toggle="modal">
+                            fix password
+                        </a>
+                        <a class="dropdown-item" href="/Member/Logout">log out</a>
+                    </div>
+                </div>
+            </div>
+
+        }
+        else
+        {
+            <div class="nav-link" style="margin-left:50px;">
+                @Session["name"] &nbsp;
+                please<a href="/Member/Login"> login</a>free register
+            </div>
+        }*@
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/Home/Index" style="margin-top:12%;width:60px;font-size:20px;">main page <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/Home/ProductList" style="margin-left:70px;margin-top:4%;width:100px;font-size:20px;">class</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Cart/Index" style="margin-left:70px;margin-top:4%;width:80px;font-size:20px;">cart</a>
+                </li>
+            </ul>
+            @using (Html.BeginForm("ProductList", "Home"))
+            {
+                <div class="d-flex">
+                    <input class="form-control mr-2" name="search" style="width:350px;" type="search" placeholder="Please enter product name or manufacturer to find" aria-label="Search">
+                    <button class="btn btn-outline-success" style="width:60px;" type="submit">search</button>
+                </div>
+            }
+        </div>
+    </nav>
+
+    <!--fade 淡入淡出-->
+    <div class="modal fade" id="myModal" aria-labelledby="myModallabel" aria-hidden="true" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="myModallabel">After changing the password, verify the email address again</h5>
+                </div>
+                @using (Html.BeginForm("PasswordEdit", "Member", new { id = (int)Session["memberid"] }))
+                {
+                    @*<form action="Admin/Products" id="formData" class="form-horizontal">*@
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <div class="col-lg-9">
+                                <input type="text" value="" name="passwordE" placeholder="new password" class="form-control">
+                                <br />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-default" type="button" data-dismiss="modal">cancel</button>
+                        <button class="btn btn-success" type="submit" onclick="">fix</button>
+                    </div>
+                    @*</form>*@
+                }
+            </div>
+        </div>
+    </div>
+
+
+    <div class="overflow-auto" style="float:left;width:18%;height: 800px;background-color:#E8E8E8;margin-top:30px;border-radius:15px;">
+        <ul style="margin:0 auto">
+            <li onmouseover="MTC(this)" onmouseout="mtc2(this)" onclick="location.href = '/Home/ProductList';" class="list-group-item d-flex justify-content-between align-items-center" style="border-radius:10px;margin-top:10px;width:200px;padding-left:60px;cursor:pointer;">
+                <div>productions</div>
+                @*<a href="/Home/ProductList">所有商品</a>*@
+            </li>
+
+            @foreach (var item in (IEnumerable<YLCShopping.Models.ProductCategory>)ViewData["toedit"])
+            {
+                <li onmouseover="MTC(this)" onmouseout="mtc2(this)" onclick="location.href = '@Url.Action("ProductList"+"/"+item.Id,"Home")';" class="list-group-item d-flex justify-content-between align-items-center" style="border-radius:10px;margin-top:10px;width:200px;padding-left:60px;cursor:pointer;">
+                    <div>@item.Name</div>
+                    @*@Html.ActionLink(item.Name, "ProductList", new { id = item.Id })*@
+                </li>
+            }
+        </ul>
+
+    </div>
+
+
+    <div style="float:left;width:65%;height:600px;margin-top:30px;border-radius:15px;margin-left:5%;">
+        @if (Model.ToList().Count != 0)
+        {
+            @*<h3>您正在浏览【@Model.First().ProductCategory.Name】分类的商品：</h3>*@
+            <div class="pre-scrollable" style="max-height:700px;width:1150px">
+                <table class="table table-striped">
+                    <tr>
+                        <th>pictures</th>
+                        <th>@Html.DisplayNameFor(model => model.Name)</th>
+                        <th>@Html.DisplayNameFor(model => model.Made)</th>
+                        <th>@Html.DisplayNameFor(model => model.Description)</th>
+                        <th>@Html.DisplayNameFor(model => model.Price)</th>
+                        <th>operation</th>
+                    </tr>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @if (item.ImageData != null)
+                                {
+                                    <div class="pull-left" style="margin-right: 10px">
+                                        <img class="img-thumbnail" width="75" height="75"
+                                             src="@Url.Action("GetImage", "Home",
+                new {item.Id })" />
+                                    </div>
+                                }
+                                else
+                                {
+                                    @Html.Label("not yet");
+                                }
+                            </td>
+                            <td>@Html.ActionLink(item.Name, "ProductDetail", new { id = item.Id })</td>
+                            <td>@Html.DisplayFor(modelItem => item.Made)</td>
+                            <td class="d-inline-block text-truncate" style="max-width: 250px;">@Html.DisplayFor(modelItem => item.Description)</td>
+                            <td>
+                                <font style="color:red;font-size:20px;">¥ @Html.DisplayFor(modelItem => item.Price)</font>
+
+
+                            </td>
+                            <td>@Ajax.ActionLink("get in cart", "AddToCart", "Cart", new { ProductId = item.Id }, ajaxOption)</td>
+                        </tr>
+                    }
+                </table>
+            </div>
+
+        }
+        else
+        {
+            <h1>please looking forward</h1>
+        }
+
+
+        <link href="~/Content/PagedList.css" rel="stylesheet" />
+
+        @{
+            var data = Model as IPagedList<YLCShopping.Models.Product>;
+        }
+        @data.Count / @data.PageSize productions，@data.PageCount in total，it's @data.PageNumber now
+        @Html.PagedListPager(list: data,
+            generatePageUrl: page => Url.Action("ProductList", new { p = page }))
+    </div>
+
+</body>

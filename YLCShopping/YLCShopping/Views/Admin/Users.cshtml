@@ -1,0 +1,209 @@
+﻿@using PagedList
+@using PagedList.Mvc
+@model IEnumerable<YLCShopping.Models.Member>
+
+@{
+    ViewBag.Title = "YLC - 用户管理";
+    Layout = "~/Views/Shared/_Layout-Admin.cshtml";
+}
+
+@section scripts{
+    <script type="text/javascript" src=" @Url.Content("~/Scripts/jquery.unobtrusive-ajax.js")"></script>
+}
+
+@{
+    var ajaxOption = new AjaxOptions()
+    {
+        OnSuccess = "RemoveCartSuccess",
+        OnFailure = "RemoveCartFailure",
+        Confirm = "Are you sure you want to delete this user? All user data will be deleted!",
+        HttpMethod = "Post"
+    };
+}
+<script type="text/javascript">
+    function RemoveCartSuccess() {
+        alert('删除成功');
+        location.reload(true);
+    }
+    function RemoveCartFailure(xhr) {
+        alert('删除失败 (HTTP 状态码: ' + xhr.status + ')');
+    }
+
+    function SuccessShow(data) {
+        alert('用户' + data.Name + '通过验证！');
+        location.reload(true);
+    }
+    function FailureShow(data) {
+        alert('用户' + data.Name + '验证失败');
+        location.reload(true);
+    }
+    function SuccesscShow(data) {
+        alert('用户' + data.Nickname + '密码初始化成功--初始密码【123456】！');
+        location.reload(true);
+    }
+    function FailurecShow(data) {
+        alert('用户' + data.Name + '初始化失败');
+        location.reload(true);
+    }
+</script>
+
+<style>
+    .list-group {
+    }
+    #myList {
+        line-height: 50px;
+        border-radius: 0px;
+    }
+    .list-all {
+        height: 80px;
+        font-size: 24px;
+        background: #222D32;
+        color:white;
+        transition:all 0.3s linear;
+    }
+        .list-all:hover {
+            background-color: #4E5465;
+            border-left: 10px solid #e66d5a;
+            color: white;
+        }
+    #active {
+        border-style:none;
+        border-left: 10px solid #e66d5a;
+        background-color: #4E5465;
+    }
+
+    #sm-title {
+        width: 100%;
+        background: #F2F2F2;
+        border-left: 10px solid #17A2B8;
+        font-size: 22px;
+        padding: 10px;
+        margin-top: 25px;
+    }
+</style>
+
+<div style="width:15%;height: calc(100vh - 80px); float:left;background-color:#222d32;">
+    <div class="list-group" id="myList" role="tablist">
+        @Html.ActionLink("main page", "Index", "Admin", new { @class = "list-group-item list-group-item-action list-all" })
+        @Html.ActionLink("user", "Users", "Admin", new { @class = "list-group-item list-group-item-action list-all" })
+        @Html.ActionLink("order", "Ordermanagement", "Admin", new { @class = "list-group-item list-group-item-action active list-all", @id = "active" })
+        @Html.ActionLink("merchandise", "Products", "Admin", new { @class = "list-group-item list-group-item-action list-all" })
+        @Html.ActionLink("about", "AboutMe", "Admin", new { @class = "list-group-item list-group-item-action list-all" })
+    </div>
+</div>
+<div style="float:left;margin-left:30px;width:80%;">
+    <h2 id="sm-title">user management</h2>
+    <span style="background:#F2F2F2;font-size:18px;margin-left:10px;">*Click on the account to verify by email</span>
+    @using (Html.BeginForm("Users", "Admin"))
+    {
+        <div class="d-flex" style="float:right;width: 350px;margin-top:15px;">
+            <div class="form-group mx-sm-3 mb-2">
+                <input name="user" class="form-control" id="input" placeholder="username">
+            </div>
+            <button type="submit" class="btn btn-primary mb-2" style="background:#17A2B8;border-style:none;">search</button>
+        </div>
+    }
+    <a href="AdminUserCreate" class="btn btn-info" style="margin-bottom:10px;margin-top:15px;">new user</a>
+    <a href="Users" class="btn btn-info" style="margin-bottom:10px;margin-top:15px;">all users</a>
+    <div class="pre-scrollable" style="max-height:550px">
+        <table class="table table-striped">
+            <tr>
+                <th>
+                    head portrait
+                </th>
+                <th>
+                    account
+                </th>
+                <th>
+                    password
+                </th>
+                <th>
+                    name
+                </th>
+                <th>
+                    username
+                </th>
+                <th>
+                    register time
+                </th>
+                <th>
+                    pass the Email or not
+                </th>
+                <th>
+                    operation
+                </th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                var data1 = "";
+                if (item.AuthCode == null)
+                {
+                    data1 = "already";
+                }
+                else
+                {
+                    data1 = "not yet";
+                }
+                <tr>
+                    <td>
+                        @if (item.ImageData != null)
+                        {
+                            <div class="img-circle image-responsive" style="margin-right: 10px">
+                                <img class="img-thumbnail" width="75" height="75"
+                                     src="@Url.Action("GetImage", "Member",
+                new { item.Id })" />
+                            </div>
+                        }
+                        else
+                        {
+                            @Html.Label("not yet");
+                        }
+                    </td>
+                    <td data-toggle="tooltip" data-placement="top" title="click it to pass">
+                        @Ajax.ActionLink(item.Email, "AdminUserAuthCode", new { id = item.Id },new AjaxOptions{
+                      HttpMethod = "Post",
+                      InsertionMode = InsertionMode.Replace,
+                      OnSuccess = "SuccessShow",
+                      OnFailure = "FailureShow"
+                  })
+                    </td>
+                    <td>
+                        *********
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nickname)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RegisterOn)
+                    </td>
+                    <td>
+                        @data1
+                    </td>
+                    <td>
+                        @Html.ActionLink("delete", "AdminUserEdit", new { id = item.Id }) |
+                        @Ajax.ActionLink("new password", "PwdInitialize", new { id = item.Id } ,new AjaxOptions
+                    {
+                        HttpMethod = "Post",
+                        InsertionMode = InsertionMode.Replace,
+                        OnSuccess = "SuccesscShow",
+                        OnFailure = "FailurecShow"
+                    }) | |
+                        @Ajax.ActionLink("delete", "AdminUserDelete", new { id = item.Id }, ajaxOption)
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+    <link href="~/Content/PagedList.css" rel="stylesheet" />
+    @{
+        var data = Model as IPagedList<YLCShopping.Models.Member>;
+    }
+    very pages @data.PageSize things，@data.PageCount in total，it's @data.PageNumber page now
+    @Html.PagedListPager(list: data, generatePageUrl: page => Url.Action("Users", new { p = page }))
+</div>
+

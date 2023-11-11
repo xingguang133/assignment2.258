@@ -1,0 +1,470 @@
+﻿@using PagedList
+@using PagedList.Mvc
+@model IEnumerable<YLCShopping.Models.OrderHeader>
+
+@{
+    ViewBag.Title = "Ordermanagement";
+    Layout = "~/Views/Shared/_Layout-Admin.cshtml";
+}
+
+@section scripts{
+    <script type="text/javascript" src=" @Url.Content("~/Scripts/jquery.unobtrusive-ajax.min.js")"></script>
+
+    <script src="@Url.Content("~/Scripts/jquery-3.3.1.min.js")"></script>
+}
+
+<script type="text/javascript">
+    function SuccessdShow(data) {
+        alert('商品' + data + '删除成功！');
+        location.reload(true);
+    }
+    function FailuredShow(data) {
+        alert('商品' + data + '删除失败');
+        location.reload(true);
+    }
+    function SuccessfShow(data) {
+        alert('商品' + data + '发货成功');
+        location.reload(true);
+    }
+    function FailurefShow(data) {
+        alert('商品' + data + '发货失败-已发货');
+        location.reload(true);
+    }
+</script>
+
+<style>
+
+    #myList {
+        line-height: 50px;
+        border-radius: 0px;
+    }
+
+    .list-all {
+        height: 80px;
+        font-size: 24px;
+        background: #222D32;
+        color: white;
+        transition: all 0.3s linear;
+    }
+
+        .list-all:hover {
+            background-color: #4E5465;
+            border-left: 10px solid #e66d5a;
+            color: white;
+        }
+
+    #active {
+        border-style: none;
+        border-left: 10px solid #e66d5a;
+        background-color: #4E5465;
+    }
+
+    #sm-title {
+        width: 100%;
+        background: #F2F2F2;
+        border-left: 10px solid #17A2B8;
+        font-size: 22px;
+        padding: 10px;
+        margin-top: 25px;
+    }
+</style>
+
+<div style="width:15%;height: calc(100vh - 80px);float:left;background-color:#222d32;">
+    <div class="list-group" id="myList" role="tablist">
+        @Html.ActionLink("主页", "Index", "Admin", new { @class = "list-group-item list-group-item-action list-all" })
+        @Html.ActionLink("用户管理", "Users", "Admin", new { @class = "list-group-item list-group-item-action list-all" })
+        @Html.ActionLink("订单管理", "Ordermanagement", "Admin", new { @class = "list-group-item list-group-item-action active list-all", @id = "active" })
+        @Html.ActionLink("商品管理", "Products", "Admin", new { @class = "list-group-item list-group-item-action list-all" })
+        @Html.ActionLink("关于", "AboutMe", "Admin", new { @class = "list-group-item list-group-item-action list-all" })
+    </div>
+</div>
+<div style="float:left;margin-left:30px;width:80%;">
+    <h2 id="sm-title">订单管理</h2>
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">所有订单</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">已发货</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">未发货</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact2" role="tab" aria-controls="contact2" aria-selected="false">加入购物车</a>
+        </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>
+                            下单用户
+                        </th>
+                        <th>
+                            收件人
+                        </th>
+                        <th>
+                            配送地址
+                        </th>
+                        <th>
+                            收件人电话
+                        </th>
+                        <th>
+                            订单总金额
+                        </th>
+                        <th>
+                            下单日期
+                        </th>
+                        <th>
+                            订单备注
+                        </th>
+                        <th>
+                            操作
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        string data1 = "";
+                        if (item.Memo == "")
+                        {
+                            data1 = "暂无";
+                        }
+                        else
+                        {
+                            data1 = item.Memo;
+                        }
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.MemberAddress.Member.Name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.MemberAddress.ContactName)
+                            </td>
+                            <td class="d-inline-block text-truncate" style="max-width: 250px;">
+                                @Html.DisplayFor(modelItem => item.MemberAddress.ContactAddress)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.MemberAddress.ContactPhoneNo)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.TotalPrice)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.BuyOn)
+                            </td>
+                            <td>
+                                @data1
+                            </td>
+                            <td>
+                                @Html.ActionLink("点击查看订单详情", "Orderdetails", new { id = item.Id })
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <link href="~/Content/PagedList.css" rel="stylesheet" />
+            @{
+                var data = Model as IPagedList<YLCShopping.Models.OrderHeader>;
+            }
+            @data.Count / @data.PageSize 条记录，共 @data.PageCount 页，当前第 @data.PageNumber 页
+            @Html.PagedListPager(list: data, generatePageUrl: page => Url.Action("Ordermanagement", new { p = page }))
+        </div>
+        <div class="tab-pane fade pre-scrollable" id="profile" role="tabpanel" aria-labelledby="profile-tab" style="max-height:650px">
+            <table class="table table-striped">
+                <tr>
+                    <th>
+                        商品图片
+                    </th>
+                    <th>
+                        订购用户
+                    </th>
+                    <th>
+                        收件人
+                    </th>
+                    <th>
+                        收件地址
+                    </th>
+                    <th>
+                        收件人联系方式
+                    </th>
+                    <th>
+                        订购商品名称
+                    </th>
+                    <th>
+                        商品类别
+                    </th>
+                    <th>
+                        商品制造商
+                    </th>
+                    <th>
+                        购买数量
+                    </th>
+                    <th>
+                        商品总价
+                    </th>
+                    <th>
+                        订单备注
+                    </th>
+                    <th>
+                        订单快递号
+                    </th>
+                    <th>
+                        操作
+                    </th>
+                </tr>
+
+                @foreach (var item in (IEnumerable<YLCShopping.Models.OrderDetail>)ViewData["Shippedorders"])
+                {
+                    string data2 = "";
+                    if (item.OrderHeader.Memo == "")
+                    {
+                        data2 = "暂无";
+                    }
+                    else
+                    {
+                        data2 = item.OrderHeader.Memo;
+                    }
+                    <tr>
+                        <td>
+                            @if (item.Product.ImageData != null)
+                            {
+                                <div class="pull-left" style="margin-right: 10px">
+                                    <img class="img-thumbnail" width="75" height="75"
+                                         src="@Url.Action("GetImage", "Home",
+                new { item.Product.Id })" />
+                                </div>
+                            }
+                            else
+                            {
+                                @Html.Label("暂无图片");
+                            }
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.OrderHeader.MemberAddress.Member.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.OrderHeader.MemberAddress.ContactName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.OrderHeader.MemberAddress.ContactAddress)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.OrderHeader.MemberAddress.ContactPhoneNo)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Product.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Product.ProductCategory.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Product.Made)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Amount)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Price)
+                        </td>
+                        <td>
+                            @data2
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Shipmentnumber)
+                        </td>
+                        <td></td>
+                    </tr>
+                }
+            </table>
+            <link href="~/Content/PagedList.css" rel="stylesheet" />
+            @{
+                var data22 = (IEnumerable<YLCShopping.Models.OrderDetail>)ViewData["Shippedorders"] as IPagedList<YLCShopping.Models.OrderDetail>;
+            }
+            @data22.Count / @data22.PageSize 条记录，共 @data22.PageCount 页，当前第 @data22.PageNumber 页
+            @Html.PagedListPager(list: data22, generatePageUrl: page => Url.Action("Ordermanagement", new { p1 = page }))
+        </div>
+        <div class="tab-pane fade pre-scrollable" id="contact" role="tabpanel" aria-labelledby="contact-tab" style="max-height:650px">
+            <table class="table table-striped">
+                <tr>
+                    <th>
+                        商品图片
+                    </th>
+                    <th>
+                        订购用户
+                    </th>
+                    <th>
+                        收件人
+                    </th>
+                    <th>
+                        收件地址
+                    </th>
+                    <th>
+                        收件人联系方式
+                    </th>
+                    <th>
+                        订购商品名称
+                    </th>
+                    <th>
+                        商品类别
+                    </th>
+                    <th>
+                        商品制造商
+                    </th>
+                    <th>
+                        购买数量
+                    </th>
+                    <th>
+                        商品总价
+                    </th>
+                    <th>
+                        订单备注
+                    </th>
+                    <th>
+                        操作
+                    </th>
+                </tr>
+
+                @foreach (var item in (IEnumerable<YLCShopping.Models.OrderDetail>)ViewData["Unshippedorders"])
+                {
+                    string data3 = "";
+                    if (item.OrderHeader.Memo == "")
+                    {
+                        data3 = "暂无";
+                    }
+                    else
+                    {
+                        data3 = item.OrderHeader.Memo;
+                    }
+                    <tr>
+                        <td>
+                            @if (item.Product.ImageData != null)
+                            {
+                                <div class="pull-left" style="margin-right: 10px">
+                                    <img class="img-thumbnail" width="75" height="75"
+                                         src="@Url.Action("GetImage", "Home",new { item.Product.Id })" />
+                                </div>
+                            }
+                            else
+                            {
+                                @Html.Label("暂无图片");
+                            }
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.OrderHeader.MemberAddress.Member.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.OrderHeader.MemberAddress.ContactName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.OrderHeader.MemberAddress.ContactAddress)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.OrderHeader.MemberAddress.ContactPhoneNo)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Product.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Product.ProductCategory.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Product.Made)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Amount)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Price)
+                        </td>
+                        <td>
+                            @data3
+                        </td>
+                        <td>
+                            @Ajax.ActionLink("删除商品订单", "Deleteorder", new { id = item.Id }, new AjaxOptions
+              {
+                  HttpMethod = "Post",
+                  OnSuccess = "SuccessdShow",
+                  OnFailure = "FailuredShow"
+              }) ||
+                            @Ajax.ActionLink("发货", "GoodsShipment", new { id = item.Id }, new AjaxOptions
+                       {
+                           HttpMethod = "Post",
+                           OnSuccess = "SuccessfShow",
+                           OnFailure = "FailurefShow"
+                       })
+                        </td>
+                    </tr>
+                }
+
+            </table>
+            @{
+                var data33 = (IEnumerable<YLCShopping.Models.OrderDetail>)ViewData["Unshippedorders"] as IPagedList<YLCShopping.Models.OrderDetail>;
+            }
+            @data33.Count / @data33.PageSize 条记录，共 @data33.PageCount 页，当前第 @data33.PageNumber 页
+            @Html.PagedListPager(list: data33, generatePageUrl: page => Url.Action("Ordermanagement", new { p2 = page }))
+        </div>
+        <div class="tab-pane fade pre-scrollable" id="contact2" role="tabpanel" aria-labelledby="contact-tab" style="max-height:650px">
+            <table class="table table-striped">
+                <tr>
+                    <th>产品图片</th>
+                    <th>加入用户</th>
+                    <th>产品名称</th>
+                    <th>产品分类</th>
+                    <th>产品制造商</th>
+                    <th>单价</th>
+                    <th>数量</th>
+                    <th>小计</th>
+                </tr>
+                @foreach (var item in (IEnumerable<YLCShopping.Models.Cart>)ViewData["AddShoppingCart"])
+                {
+                    <tr>
+                        <td>
+                            @if (item.Product.ImageData != null)
+                            {
+                                <div class="pull-left" style="margin-right: 10px">
+                                    <img class="img-thumbnail" width="75" height="75"
+                                         src="@Url.Action("GetImage", "Home",new { item.Product.Id })" />
+                                </div>
+                            }
+                            else
+                            {
+                                @Html.Label("暂无图片");
+                            }
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Member.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Product.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Product.ProductCategory.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Product.Made)
+                        </td>
+                        <td>
+                            ¥ @Html.DisplayFor(modelItem => item.Product.Price)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Amount)
+                        </td>
+                        <td>
+                            ¥ @(item.Amount * item.Product.Price)
+                        </td>
+
+                    </tr>
+                }
+            </table>
+            @{
+                var data44 = (IEnumerable<YLCShopping.Models.Cart>)ViewData["AddShoppingCart"] as IPagedList<YLCShopping.Models.Cart>;
+            }
+            @data44.Count / @data44.PageSize 条记录，共 @data44.PageCount 页，当前第 @data44.PageNumber 页
+            @Html.PagedListPager(list: data44, generatePageUrl: page => Url.Action("Ordermanagement", new { p3 = page }))
+        </div>
+    </div>
+</div>

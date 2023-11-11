@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bowl buying</title>
+    @*@Styles.Render("~/Content/css")
+        @Styles.Render("~/Content/YLC_CSS_JS/css")
+        @Scripts.Render("~/bundles/modernizr")*@
+
+
+    @*<link rel="stylesheet" href="~/Content/bootstrap.min.css">*@
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+
+
+    <script src="~/Scripts/jquery.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        /**退出系统**/
+        function logout() {
+            if (confirm("Are you sure you want to log out?")) {
+                window.location.href = "Login";
+                sessionStorage.clear();
+            }
+        }
+        function date() {
+            var date = new Date();
+            this.year = date.getFullYear();
+            this.month = date.getMonth() + 1;
+            this.date = date.getDate();
+            this.day = new Array("Sunday"," Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday")[date.getDay()];
+            this.hour = date.getHours() < 10 ? "0" + date.getHours() : date.getHours();
+            this.minute = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
+            this.second = date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds();
+            var currentTime1 = this.year + "year" + this.month + "month" + this.date + "day "
+                + this.day;
+            document.getElementById("times").innerHTML = currentTime1;
+        }
+    </script>
+    <style>
+        #exitSystem {
+            background: #e66d5a;
+            border: none;
+            transition: all 0.3s linear;
+        }
+            #exitSystem:hover {
+                background: #E22001;
+            }
+    </style>
+</head>
+<body style="padding-top:0px;margin:0;height:100%;" onload="date()">
+    <div style="height:80px;width:100%;background-color:#222d32;overflow:hidden;">
+        <div style="width:40%;height:100%;float:left;font-size:35px;line-height:80px;color:white;margin-left:30px;">
+            <img src="~/favicon.ico" width="35" height="35" style="margin-top:-7px;" />&nbsp;【bowl buying】Mall backstage management
+        </div>
+        <div style="width:10%;height:100%;float:right;padding-top:25px;"><button onclick="logout()" class="btn btn-danger" id="exitSystem">log out</button></div>
+        <div style="width:20%;height:100%;float:right;color:white;padding-top:30px;">date：<span id="times"></span></div>
+        <div style="width:10%;height:100%;float:right;color:white;padding-top:30px;">User now：<span>@Session["adminname1"]</span></div>
+    </div>
+    @*<div style="width:15%;height: 670px;float:left;background-color:#D3D3D3;">
+          <div class="list-group" id="myList" role="tablist">
+            @Html.ActionLink("主页", "Index", "Admin", new { @class = "list-group-item list-group-item-action active" })
+            @Html.ActionLink("用户管理", "Users", "Admin", new { @class = "list-group-item list-group-item-action" })
+            @Html.ActionLink("商品管理", "Products", "Admin", new { @class = "list-group-item list-group-item-action" })
+            @Html.ActionLink("关于", "AboutMe", "Admin", new { @class = "list-group-item list-group-item-action" })
+          </div>
+        </div>*@
+    @RenderBody()
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

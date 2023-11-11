@@ -1,0 +1,209 @@
+﻿@using PagedList
+@using PagedList.Mvc
+@model IEnumerable<YLCShopping.Models.Member>
+
+@{
+    ViewBag.Title = "YLC - 用户管理";
+    Layout = "~/Views/Shared/_Layout-Admin.cshtml";
+}
+
+@section scripts{
+    <script type="text/javascript" src=" @Url.Content("~/Scripts/jquery.unobtrusive-ajax.js")"></script>
+}
+
+@{
+    var ajaxOption = new AjaxOptions()
+    {
+        OnSuccess = "RemoveCartSuccess",
+        OnFailure = "RemoveCartFailure",
+        Confirm = "您确定要删除该用户吗？用户所有数据都将被删除！",
+        HttpMethod = "Post"
+    };
+}
+<script type="text/javascript">
+    function RemoveCartSuccess() {
+        alert('删除成功');
+        location.reload(true);
+    }
+    function RemoveCartFailure(xhr) {
+        alert('删除失败 (HTTP 状态码: ' + xhr.status + ')');
+    }
+
+    function SuccessShow(data) {
+        alert('用户' + data.Name + '通过验证！');
+        location.reload(true);
+    }
+    function FailureShow(data) {
+        alert('用户' + data.Name + '验证失败');
+        location.reload(true);
+    }
+    function SuccesscShow(data) {
+        alert('用户' + data.Nickname + '密码初始化成功--初始密码【123456】！');
+        location.reload(true);
+    }
+    function FailurecShow(data) {
+        alert('用户' + data.Name + '初始化失败');
+        location.reload(true);
+    }
+</script>
+
+<style>
+    .list-group {
+    }
+    #myList {
+        line-height: 50px;
+        border-radius: 0px;
+    }
+    .list-all {
+        height: 80px;
+        font-size: 24px;
+        background: #222D32;
+        color:white;
+        transition:all 0.3s linear;
+    }
+        .list-all:hover {
+            background-color: #4E5465;
+            border-left: 10px solid #e66d5a;
+            color: white;
+        }
+    #active {
+        border-style:none;
+        border-left: 10px solid #e66d5a;
+        background-color: #4E5465;
+    }
+
+    #sm-title {
+        width: 100%;
+        background: #F2F2F2;
+        border-left: 10px solid #17A2B8;
+        font-size: 22px;
+        padding: 10px;
+        margin-top: 25px;
+    }
+</style>
+
+<div style="width:15%;height: calc(100vh - 80px); float:left;background-color:#222d32;">
+    <div class="list-group" id="myList" role="tablist">
+        @Html.ActionLink("主页", "Index", "Admin", new { @class = "list-group-item list-group-item-action list-all" })
+        @Html.ActionLink("用户管理", "Users", "Admin", new { @class = "list-group-item list-group-item-action active list-all" ,@id="active" })
+        @Html.ActionLink("订单管理", "Ordermanagement", "Admin", new { @class = "list-group-item list-group-item-action list-all" })
+        @Html.ActionLink("商品管理", "Products", "Admin", new { @class = "list-group-item list-group-item-action list-all" })
+        @Html.ActionLink("关于", "AboutMe", "Admin", new { @class = "list-group-item list-group-item-action list-all" })
+    </div>
+</div>
+<div style="float:left;margin-left:30px;width:80%;">
+    <h2 id="sm-title">用户管理</h2>
+    <span style="background:#F2F2F2;font-size:18px;margin-left:10px;">*点击账号即可通过邮箱验证</span>
+    @using (Html.BeginForm("Users", "Admin"))
+    {
+        <div class="d-flex" style="float:right;width: 350px;margin-top:15px;">
+            <div class="form-group mx-sm-3 mb-2">
+                <input name="user" class="form-control" id="input" placeholder="输入账号/用户名/姓名">
+            </div>
+            <button type="submit" class="btn btn-primary mb-2" style="background:#17A2B8;border-style:none;">查找</button>
+        </div>
+    }
+    <a href="AdminUserCreate" class="btn btn-info" style="margin-bottom:10px;margin-top:15px;">创建用户</a>
+    <a href="Users" class="btn btn-info" style="margin-bottom:10px;margin-top:15px;">查看所有用户</a>
+    <div class="pre-scrollable" style="max-height:550px">
+        <table class="table table-striped">
+            <tr>
+                <th>
+                    头像
+                </th>
+                <th>
+                    账号
+                </th>
+                <th>
+                    密码
+                </th>
+                <th>
+                    姓名
+                </th>
+                <th>
+                    用户名
+                </th>
+                <th>
+                    注册时间
+                </th>
+                <th>
+                    是否通过Email认证
+                </th>
+                <th>
+                    操作
+                </th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                var data1 = "";
+                if (item.AuthCode == null)
+                {
+                    data1 = "已通过认证";
+                }
+                else
+                {
+                    data1 = "未通过认证";
+                }
+                <tr>
+                    <td>
+                        @if (item.ImageData != null)
+                        {
+                            <div class="img-circle image-responsive" style="margin-right: 10px">
+                                <img class="img-thumbnail" width="75" height="75"
+                                     src="@Url.Action("GetImage", "Member",
+                new { item.Id })" />
+                            </div>
+                        }
+                        else
+                        {
+                            @Html.Label("暂无图片");
+                        }
+                    </td>
+                    <td data-toggle="tooltip" data-placement="top" title="点击通过认证">
+                        @Ajax.ActionLink(item.Email, "AdminUserAuthCode", new { id = item.Id },new AjaxOptions{
+                      HttpMethod = "Post",
+                      InsertionMode = InsertionMode.Replace,
+                      OnSuccess = "SuccessShow",
+                      OnFailure = "FailureShow"
+                  })
+                    </td>
+                    <td>
+                        *********
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nickname)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RegisterOn)
+                    </td>
+                    <td>
+                        @data1
+                    </td>
+                    <td>
+                        @Html.ActionLink("修改", "AdminUserEdit", new { id = item.Id }) |
+                        @Ajax.ActionLink("初始化密码", "PwdInitialize", new { id = item.Id } ,new AjaxOptions
+                    {
+                        HttpMethod = "Post",
+                        InsertionMode = InsertionMode.Replace,
+                        OnSuccess = "SuccesscShow",
+                        OnFailure = "FailurecShow"
+                    }) | |
+                        @Ajax.ActionLink("删除", "AdminUserDelete", new { id = item.Id }, ajaxOption)
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+    <link href="~/Content/PagedList.css" rel="stylesheet" />
+    @{
+        var data = Model as IPagedList<YLCShopping.Models.Member>;
+    }
+    每页 @data.PageSize 条记录，共 @data.PageCount 页，当前第 @data.PageNumber 页
+    @Html.PagedListPager(list: data, generatePageUrl: page => Url.Action("Users", new { p = page }))
+</div>
+

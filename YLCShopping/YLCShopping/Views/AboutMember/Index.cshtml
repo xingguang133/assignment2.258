@@ -1,0 +1,626 @@
+﻿@model YLCShopping.Models.Member
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="height:60px;">
+    <a class="navbar-brand" href="Index" style="width:180px;font-size:30px;">【bowl bying】shop</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll" style="max-height: 100px;">
+           @* <li class="nav-item">
+                @if (User.Identity.IsAuthenticated)
+                {
+                    int id = (int)Session["memberid"];
+                    <div class="nav-link" style="width:330px;">
+                        @if (id != 0)
+                        {
+                            <img onclick="location.href = '@Url.Action("Index","AboutMember")';" class="img-circle image-responsive" style="float:left;margin-right:5px; width:40px;height:40px;margin-top:0px;border-radius:50%;cursor:pointer;" src="@Url.Action("GetImage", "Member",new { id })" />
+
+                        }
+                        else
+                        {
+
+                            <img onclick="location.href = '@Url.Action("Index","AboutMember")';" class="img-circle image-responsive " style="float: left; width: 64px; height: 64px; margin-top: 0px; cursor: pointer;" src="~/Content/Images/Logo.png" />
+                        }
+
+                        <div class="dropdown" style="float:left;margin-top:0px;">
+                            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false">
+                                <span  style="cursor: pointer;"> hello，@Session["name"] </span>&nbsp;
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="/AboutMember/Index">manual center</a>
+                                <a class="dropdown-item" href="/Member/Logout">out</a>
+                            </div>
+                        </div>
+                    </div>
+
+                }
+                else
+                {
+                    <div class="nav-link" style="margin-left:50px;">
+                        @Session["name"] &nbsp;
+                        please<a href="/Member/Login"> login</a>free register
+                    </div>
+                }*@
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/Home/Index" style="margin-top:12%;width:60px;font-size:20px;">main page <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/Home/ProductList" style="margin-left:70px;margin-top:4%;width:100px;font-size:20px;">class</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/Cart/Index" style="margin-left:70px;margin-top:4%;width:80px;font-size:20px;">cart</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div style="float:left;width:100%;height:600px;margin-top:30px;border-radius:15px;">
+    <div class="row">
+        <div style="float:left;width:15%;height:800px;background-color:#E8E8E8;margin-top:0px;border-radius:15px;padding-left:50px;">
+            <div>
+                @if (Model.ImageData != null)
+                {
+                    <img class="img-thumbnail" style="width:75px;height:75px;margin-left:45px;margin-top:20px;border-radius:15%;" src="@Url.Action("GetImage", "Member",new { Model.Id })" />
+                }
+                else
+                {
+
+                    <img class="img-thumbnail " style="width:75px;height:75px;margin-left:45px;margin-top:20px;border-radius:15%;" src="~/Content/Images/Logo.png" />
+                }
+            </div>
+            <h2 style="margin-left:15px;margin-top:10px;margin-bottom:30px;">manual center</h2>
+            <div class="col-3">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true" style="height:45px; width:160px">账号信息</a>
+                    <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false" style="height:45px;">我的订单</a>
+                    <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false" style="height:45px;">地址管理</a>
+                    <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false" style="height:45px;">Settings</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-10">
+            <div class="tab-content" id="v-pills-tabContent" style="margin-top:50px;">
+                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+
+                    <!--fade 淡入淡出-->
+                    <div class="modal fade" id="myModal1" aria-labelledby="myModallabel" aria-hidden="true" tabindex="-1">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="myModallabel">After changing the password, verify the email address again</h5>
+                                </div>
+                                @using (Html.BeginForm("PasswordEdit", "Member", new { id = (int)Session["memberid"] }))
+                                {
+                                    @*<form action="Admin/Products" id="formData" class="form-horizontal">*@
+                                    <div class="modal-body">
+                                        <div class="form-group">
+                                            <div class="col-lg-9">
+                                                <input type="text" value="" name="passwordE" placeholder="new password" class="form-control">
+                                                <br />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button class="btn btn-default" type="button" data-dismiss="modal">cancel</button>
+                                        <button class="btn btn-success" type="submit" onclick="">fix</button>
+                                    </div>
+                                    @*</form>*@
+                                }
+                            </div>
+                        </div>
+                    </div>
+
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+
+                        <div class="form-horizontal">
+                            @*<h4>个人信息</h4>*@
+                            <hr />
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            <fieldset disabled>
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-3">
+                                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-3">
+                                        @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-3">
+                                        @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Nickname, htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-3">
+                                        @Html.EditorFor(model => model.Nickname, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Nickname, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.RegisterOn, htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-3">
+                                        @Html.EditorFor(model => model.RegisterOn, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.RegisterOn, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                    }
+                </div>
+                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                    <div style="width:100%;height:500px;margin-top:50px;">
+                        <nav>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">所有订单</a>
+                                <a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">已发货</a>
+                                <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">未发货</a>
+
+                            </div>
+                        </nav>
+
+                        <!--fade 淡入淡出-->
+                        <div class="modal fade" id="myModal1" aria-labelledby="myModallabel" aria-hidden="true" tabindex="-1">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="myModallabel">After changing the password, verify the email address again</h5>
+                                    </div>
+                                    @using (Html.BeginForm("PasswordEdit", "Member", new { id = (int)Session["memberid"] }))
+                                    {
+                                        @*<form action="Admin/Products" id="formData" class="form-horizontal">*@
+                                        <div class="modal-body">
+                                            <div class="form-group">
+                                                <div class="col-lg-9">
+                                                    <input type="text" value="" name="passwordE" placeholder="new password" class="form-control">
+                                                    <br />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button class="btn btn-default" type="button" data-dismiss="modal">cancel</button>
+                                            <button class="btn btn-success" type="submit" onclick="">fix</button>
+                                        </div>
+                                        @*</form>*@
+                                    }
+                                </div>
+                            </div>
+                        </div>
+
+                        @* 所有订单 *@
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                Serial number
+                                            </th>
+                                            <th>
+                                                addressee
+                                            </th>
+                                            <th>
+                                                Shipping address
+                                            </th>
+                                            <th>
+                                                Recipient phone number
+                                            </th>
+                                            <th>
+                                                Order goods
+                                            </th>
+                                            <th>
+                                                Commodity quantity
+                                            </th>
+                                            <th>
+                                                Unit price of goods
+                                            </th>
+                                            <th>
+                                                Gross merchandise value
+                                            </th>
+                                            <th>
+                                                Order date
+                                            </th>
+                                            <th>
+                                                Order note
+                                            </th>
+                                            <th>
+                                                Delivery or not
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in (IEnumerable<YLCShopping.Models.OrderDetail>)ViewData["Allorders"])
+                                        {
+                                            var ss = (int)(item.Price) / (int)(item.Amount);
+                                            string data2 = "";
+                                            if (item.Shipmentnumber == null)
+                                            {
+                                                data2 = "undeliver";
+                                            }
+                                            else
+                                            {
+                                                data2 = "deliverd";
+                                            }
+                                            int i = 1;
+                                            string data = "";
+                                            if (item.OrderHeader.Memo == "")
+                                            {
+                                                data = "not yet";
+                                            }
+                                            else
+                                            {
+                                                data = item.OrderHeader.Memo;
+                                            }
+                                            <tr>
+                                                <td>
+                                                    @i
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.OrderHeader.MemberAddress.ContactName)
+                                                </td>
+                                                <td class="d-inline-block text-truncate" style="max-width: 250px;">
+                                                    @Html.DisplayFor(modelItem => item.OrderHeader.MemberAddress.ContactAddress)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.OrderHeader.MemberAddress.ContactPhoneNo)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Product.Name)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Amount)
+                                                </td>
+                                                <td>
+                                                    <font style="color:red;font-size:20px;">¥ @ss</font>
+
+                                                </td>
+                                                <td>
+                                                    <font style="color:red;font-size:20px;"> @Html.DisplayFor(modelItem => item.Price)</font>
+
+
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.OrderHeader.BuyOn)
+                                                </td>
+                                                <td class="d-inline-block text-truncate" style="max-width: 100px;">
+                                                    @data
+                                                </td>
+                                                <td>
+                                                    @data2
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                序号
+                                            </th>
+                                            <th>
+                                                商品图片
+                                            </th>
+                                            <th>
+                                                订购商品
+                                            </th>
+                                            <th>
+                                                配送地址
+                                            </th>
+                                            <th>
+                                                收件人
+                                            </th>
+                                            <th>
+                                                商品数量
+                                            </th>
+                                            <th>
+                                                商品单价
+                                            </th>
+                                            <th>
+                                                商品总金额
+                                            </th>
+                                            <th>
+                                                备注
+                                            </th>
+                                            <th>
+                                                发货单号
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in (IEnumerable<YLCShopping.Models.OrderDetail>)ViewData["Shippedorders"])
+                                        {
+                                            var ss = (int)item.Price / (int)item.Amount;
+                                            int i = 1;
+                                            string data = "";
+                                            if (item.OrderHeader.Memo == "")
+                                            {
+                                                data = "暂无";
+                                            }
+                                            else
+                                            {
+                                                data = item.OrderHeader.Memo;
+                                            }
+                                            <tr>
+                                                <td>
+                                                    @i
+                                                </td>
+                                                <td>
+                                                    @if (item.Product.ImageData != null)
+                                                    {
+                                                        <div class="pull-left" style="margin-right: 10px">
+                                                            <img class="img-thumbnail" width="75" height="75"
+                                                                 src="@Url.Action("GetImage", "Home",new { item.Product.Id })" />
+                                                        </div>
+                                                    }
+                                                    else
+                                                    {
+                                                        <img src="~/Content/Images/Logo.png" />
+                                                    }
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Product.Name)
+                                                </td>
+                                                <td class="d-inline-block text-truncate" style="max-width: 250px;">
+                                                    @Html.DisplayFor(modelItem => item.OrderHeader.MemberAddress.ContactAddress)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.OrderHeader.MemberAddress.ContactName)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Amount)
+                                                </td>
+                                                <td>
+                                                    <font style="color:red;font-size:20px;">¥ @ss</font>
+
+                                                </td>
+                                                <td>
+                                                    <font style="color:red;font-size:20px;">@Html.DisplayFor(modelItem => item.Price)</font>
+
+                                                </td>
+                                                <td class="d-inline-block text-truncate" style="max-width: 60px;">
+                                                    @data
+                                                </td>
+
+                                                <td  style="width: 200px;">
+                                                    @Html.DisplayFor(modelItem => item.Shipmentnumber)
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                序号
+                                            </th>
+                                            <th>
+                                                商品图片
+                                            </th>
+                                            <th>
+                                                订购商品
+                                            </th>
+                                            <th>
+                                                收件人
+                                            </th>
+                                            <th>
+                                                配送地址
+                                            </th>
+                                            <th>
+                                                商品数量
+                                            </th>
+                                            <th>
+                                                商品单价
+                                            </th>
+                                            <th>
+                                                商品总金额
+                                            </th>
+                                            <th>
+                                                备注
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in (IEnumerable<YLCShopping.Models.OrderDetail>)ViewData["Unshippedorders"])
+                                        {
+                                            var ss = (int)item.Price / (int)item.Amount;
+                                            int i = 1;
+                                            string data = "";
+                                            if (item.OrderHeader.Memo == "")
+                                            {
+                                                data = "暂无";
+                                            }
+                                            else
+                                            {
+                                                data = item.OrderHeader.Memo;
+                                            }
+                                            <tr>
+                                                <td>
+                                                    @i
+                                                </td>
+                                                <td>
+                                                    @if (item.Product.ImageData != null)
+                                                    {
+                                                        <div class="pull-left" style="margin-right: 10px">
+                                                            <img class="img-thumbnail" width="75" height="75"
+                                                                 src="@Url.Action("GetImage", "Home",new { item.Product.Id })" />
+                                                        </div>
+                                                    }
+                                                    else
+                                                    {
+                                                        <div class="pull-left" style="margin-right: 10px">
+                                                            <img class="img-thumbnail" width="75" height="75" src="~/Content/Images/Logo.png" />
+                                                        </div>
+                                                    }
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Product.Name)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.OrderHeader.MemberAddress.ContactName)
+                                                </td>
+                                                <td class="d-inline-block text-truncate" style="max-width: 250px;">
+                                                    @Html.DisplayFor(modelItem => item.OrderHeader.MemberAddress.ContactAddress)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Amount)
+                                                </td>
+                                                <td>
+                                                    <font style="color:red;font-size:20px;">¥ @ss</font>
+                                                </td>
+                                                <td>
+                                                    <font style="color:red;font-size:20px;">
+                                                        @Html.DisplayFor(modelItem => item.Price)
+                                                    </font>
+
+                                                </td>
+                                                <td class="d-inline-block text-truncate" style="max-width: 70px;">
+                                                    @data
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                    <hr />
+                    <h4>地址管理</h4>
+                    <p>请在下单时修改/新建</p>
+
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>
+                                    收件人
+                                </th>
+                                <th>
+                                    配送地址
+                                </th>
+                                <th>
+                                    收件人电话
+                                </th>
+                                <th>
+                                    操作
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in (IEnumerable<YLCShopping.Models.MemberAddress>)ViewData["Dizhi"])
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.ContactName)
+                                    </td>
+                                    <td class="d-inline-block text-truncate" @*style="max-width: 450px;"*@>
+                                        @Html.DisplayFor(modelItem => item.ContactAddress)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.ContactPhoneNo)
+                                    </td>
+                                    <td>
+                                        @Html.ActionLink("删除", "AddressDelect", new { id = item.Id })
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                    <h3>
+                        用户详细信息设置
+                    </h3>
+                    <hr />
+                    @using (Html.BeginForm("MemberEdit", "AboutMember", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                    {
+                        @Html.AntiForgeryToken()
+
+                    <div class="form-horizontal">
+
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                        <div class="form-group" style="margin-left:15px;">
+                            <label >用户头像</label>
+                            @if (Model.ImageData != null)
+                            {
+                                <img class="img-thumbnail" style="width:75px;height:75px;margin-left:45px;margin-top:20px;border-radius:15%;" src="@Url.Action("GetImage", "Member",new { Model.Id })" />
+                            }
+                            else
+                            {
+
+                                <img class="img-thumbnail " style="width:75px;height:75px;margin-left:45px;margin-top:20px;border-radius:15%;" src="~/Content/Images/Logo.png" />
+                            }
+                            <div style="position:relative;">
+
+                                <a class='btn' href='javascript:;'>
+                                    点击修改图像
+                                    <input type="file" name="image" size="40"
+                                           style="position:absolute;z-index:2;top:0;
+                            left:0;filter: alpha(opacity=0); opacity:0;
+                            background-color:transparent;color:transparent;"
+                                           onchange='$("#upload-file-info").html($(this).val());'>
+                                </a>
+                                <span class='label label-info' id="upload-file-info"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-3">
+                                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Nickname, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-3">
+                                @Html.EditorFor(model => model.Nickname, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Nickname, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <input type="submit" value="保存" class="btn btn-info" />
+                                &nbsp;&nbsp;&nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+                            </div>
+                        </div>
+                    </div>
+
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

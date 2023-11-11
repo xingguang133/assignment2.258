@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewBag.Title = "AboutMe";
+    Layout = "~/Views/Shared/_Layout-Admin.cshtml";
+}
+<style>
+    .list-group {
+    }
+
+    #myList {
+        line-height: 50px;
+        border-radius: 0px;
+    }
+
+    .list-all {
+        height: 80px;
+        font-size: 24px;
+        background: #222D32;
+        color: white;
+        transition: all 0.3s linear;
+    }
+
+        .list-all:hover {
+            background-color: #4E5465;
+            border-left: 10px solid #e66d5a;
+            color: white;
+        }
+
+    #active {
+        border-style: none;
+        border-left: 10px solid #e66d5a;
+        background-color: #4E5465;
+    }
+
+    #sm-title {
+        width: 100%;
+        background: #F2F2F2;
+        border-left: 10px solid #17A2B8;
+        font-size: 22px;
+        padding: 10px;
+        margin-top: 25px;
+    }
+</style>
+<div style="width:15%;height: calc(100vh - 80px);float:left;background-color:#222d32;">
+    <div class="list-group" id="myList" role="tablist">
+        @Html.ActionLink("main page", "Index", "Admin", new { @class = "list-group-item list-group-item-action list-all" })
+        @Html.ActionLink("user", "Users", "Admin", new { @class = "list-group-item list-group-item-action active list-all", @id = "active" })
+        @Html.ActionLink("order", "Ordermanagement", "Admin", new { @class = "list-group-item list-group-item-action list-all" })
+        @Html.ActionLink("merchandise", "Products", "Admin", new { @class = "list-group-item list-group-item-action list-all" })
+        @Html.ActionLink("about", "AboutMe", "Admin", new { @class = "list-group-item list-group-item-action list-all" })
+    </div>
+</div>
+<div style="float:left;margin-left:30px;width:80%;">
+  <h2 id="sm-title">about</h2>
+    <br />
+    <h2>This is a backend of a product management system</h2>
+</div>
+

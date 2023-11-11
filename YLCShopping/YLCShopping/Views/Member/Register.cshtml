@@ -1,0 +1,202 @@
+﻿@model YLCShopping.Models.Member
+@{
+  Layout = null;
+}
+<title>YLC-Shopping</title>
+@Styles.Render("~/Content/css")
+@*@Styles.Render("~/Content/YLC_CSS_JS/css")*@
+@Scripts.Render("~/bundles/modernizr")
+<script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
+
+<style>
+
+  .title-nav {
+    width: 100%;
+    height: 70px;
+    background: white;
+    line-height: 70px;
+    padding-left: 35px;
+    color: #656565;
+  }
+
+  .title-img, title-text {
+    float: left;
+    font-size:12px;
+  }
+
+  .title-img {
+    margin-top: 17.5px;
+    margin-right: 35px;
+  }
+
+  .main-content {
+    height: 750px;
+    background-image: url('../../Content/Images/backgroud.jpg');
+  }
+
+  .big-title {
+    text-align: center;
+    color: #323232;
+    padding-top: 65px;
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .text-area {
+    width: 340px;
+    margin: auto;
+  }
+
+  .Users-Register {
+    background-color: white;
+    height: 625px;
+    width: 400px;
+    position: absolute;
+    top: -100px;
+    left: 700px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+    border-radius: 3px;
+  }
+
+
+  .form-group {
+    width: 340px;
+    background: white;
+    border-radius: 3px;
+    border: 1px solid #DADADA;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .form-control {
+    width: 290px;
+    height: 40px;
+    max-width: none;
+    border: none;
+  }
+
+  #register-icon-1, #user-login {
+    float: left;
+    margin-left: 8px;
+  }
+
+  #register-icon-2, #lock-login {
+    float: left;
+    margin-left: 8px;
+  }
+
+  #register-icon-1, #register-icon-2 {
+    text-align: center;
+    margin-top: 8px;
+  }
+
+  .notice-span {
+    height: 20px;
+    text-align: left;
+    color: #e66d5a;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .btn-register {
+    width: 340px;
+    height: 50px;
+    max-width: none;
+    margin: auto;
+    font-size: 20px;
+    background: #e66d5a;
+    border: none;
+    color: white;
+  }
+
+    .btn-register:hover {
+      background: #F8A598;
+      color: white;
+    }
+
+  .register-return {
+    display: block;
+    width: 340px;
+    height: 50px;
+    text-align: center;
+    color: #e66d5a;
+    font-size: 20px;
+    line-height: 50px;
+    border: 1px solid #e66d5a;
+    border-radius: 3px;
+    line-height: 50px;
+    margin-top: 13px;
+  }
+
+    .register-return:hover {
+      background: #e66d5a;
+      color: white;
+      text-decoration: none;
+    }
+
+  .footer-content {
+    height: 80px;
+    line-height: 30px;
+    padding-top: 30px;
+    text-align: center;
+  }
+</style>
+
+<body>
+  @using (Html.BeginForm())
+  {
+    <div class="title-nav">
+      <img width="35" height="35" src="~/Content/Images/Logo.png" class="title-img" />
+      <p class="title-text" style="font-size:35px">【bowl bying】shop</p>
+    </div>
+    <div class="main-content">
+      <div class="Users-Register">
+        <div class="big-title"><p>register</p></div>
+        <div class="text-area">
+          <div class="form-group">
+            <img width="23" height="23" id="register-icon-1" src="~/Content/Images/user-暗紫色.png" />
+            @Html.TextBoxFor(model => model.Email, new { data_val_email = "", @class = "form-control", id = "user-text", placeholder = "Email please" })
+          </div>
+          <p class="notice-span">@Html.ValidationMessageFor(model => model.Email)</p>
+          <div class="form-group">
+            <img width="23" height="23" id="register-icon-1" src="~/Content/Images/lock-暗紫色.png" />
+            @Html.TextBoxFor(model => model.Password, new { data_val_email = "", @class = "form-control", id = "lock-text", placeholder = "password please", type = "password" })
+          </div>
+          <p class="notice-span">@Html.ValidationMessageFor(model => model.Password)</p>
+
+          <div class="form-group">
+            <img width="23" height="23" id="register-icon-1" src="~/Content/Images/user-暗紫色.png" />
+            @Html.TextBoxFor(model => model.Name, new { data_val_email = "", @class = "form-control", id = "user-text", placeholder = "name please" })
+          </div>
+          <p class="notice-span">@Html.ValidationMessageFor(model => model.Name)</p>
+          <div class="form-group">
+            <img width="23" height="23" id="register-icon-1" src="~/Content/Images/user-暗紫色.png" />
+            @Html.TextBoxFor(model => model.Nickname, new { data_val_email = "", @class = "form-control", id = "user-text", placeholder = "username please" })
+          </div>
+          <p class="notice-span">@Html.ValidationMessageFor(model => model.Nickname)</p>
+          <div style="width:200px;height:10px;">@Html.ValidationSummary(true)</div>
+          <div style="width:340px;margin-top:-10px;">
+            <input type="submit" value="register" class="btn btn-register" />
+            <a href="Login" class="register-return">back</a>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+    <div class="footer-content">
+
+        <span>After registration, email verification is required to log in. Please check your email</span>
+      <br />
+      <span>Copyright ©2022 【bowl buying】shop.</span>
+
+    </div>
+  }
+</body>
+
+@section Scripts {
+  @Scripts.Render("~/bundles/jqueryval")
+}

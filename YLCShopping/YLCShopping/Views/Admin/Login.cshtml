@@ -1,0 +1,121 @@
+﻿@model YLCShopping.Models.Admin
+@{
+    Layout = null;
+}
+
+
+@Styles.Render("~/Content/css")
+@Styles.Render("~/Content/YLC_CSS_JS/css")
+@Scripts.Render("~/bundles/modernizr")
+
+@*<h2>管理员登入</h2>*@
+
+<title>【bowl bying】Commodity mall backstage management</title>
+<style>
+    * {
+        margin: 0px auto;
+        padding: 0px;
+    }
+
+    #login-big {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        bottom: 0px;
+        right: 0px;
+        margin: auto;
+        border: 1px solid black;
+        padding: 10px;
+        width: 500px;
+        background-color: white;
+    }
+
+    #textbox-login {
+        width: 300px;
+        height: 40px;
+        border-bottom: 1px solid #a8b5b5;
+    }
+
+    #login-icon-1, #formGroupExampleInput {
+        float: left;
+        line-height: 25px;
+    }
+
+    #formGroupExampleInput {
+        margin-left: 10px;
+        color: #a8b5b5;
+        margin: 0px auto;
+        width: 270px;
+        border-style: none;
+    }
+
+    #login-icon-2, #textbox-login-txt {
+        float: left;
+        line-height: 25px;
+    }
+
+    #textbox-login-txt {
+        margin-left: 10px;
+        color: #5B6767;
+        margin: 0px auto;
+        width: 270px;
+        border-style: none;
+    }
+
+    #login-button {
+        width: 300px;
+        height: 35px;
+        margin-top: 10px;
+        border-radius: 25px;
+        background-color: #e66d5a;
+        border: none;
+    }
+
+    #login-button:hover {
+        background-color: #E21F00;
+    }
+</style>
+
+@using (Html.BeginForm())
+{
+<body style="margin: 0px auto; background-image: url('../../Content/Images/adbk.jpeg'); background-size: 100% 100%; ">
+    <a class="btn btn-secondary" href="/Member/Login" style="float:right;">
+        user site
+    </a>
+    <div class="admin-login" id="login-big">
+        <div style="margin:0 auto;text-align:center;">
+            <img src="~/favicon.ico" height="70" width="70" style="border-radius:10px;" />
+        </div>
+        <p style="text-align:center;margin-top:20px;font-weight:700;font-size:30px;color: #e66d5a;">manager site</p>
+        <form>
+            <div class="form-group" id="textbox-login">
+                @*<label for="formGroupExampleInput">账&nbsp;号</label>*@
+                <img src="~/Content/Images/user.png" id="login-icon-1" width="30" height="30" />
+                @Html.TextBoxFor(model => model.AdminName, new { data_val_AdminName = "account please", type = "text", @class = "form-control", id = "formGroupExampleInput", placeholder = "account please" })
+                @Html.ValidationMessageFor(model => model.AdminName)
+            </div>
+            <div class="form-group" id="textbox-login">
+                @*<label for="formGroupExampleInput2">密&nbsp;码</label>*@
+                <img src="~/Content/Images/lock.png" id="login-icon-2" width="30" height="30" />
+                @Html.TextBoxFor(model => model.Pwd, new { data_val_AdminName = "password please", @class = "form-control", type = "password", id = "textbox-login-txt", placeholder = "password please" })
+                @Html.ValidationMessageFor(model => model.Pwd)
+            </div>
+            <div style="width:300px;height:30px;color:red;">@Html.ValidationSummary(true)</div>
+            <p style="margin:0px auto;text-align:center;">
+                <input type="submit" value="login" class="btn btn-primary" id="login-button" />
+            </p>
+        </form>
+
+    </div>
+</body>
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+    @if (TempData["LastTempMessage"] != null)
+    {
+<script>
+    alert('@HttpUtility.JavaScriptStringEncode(Convert.ToString(TempData["LastTempMessage"]))');
+</script>
+    }
+}

@@ -1,0 +1,473 @@
+﻿@using PagedList
+@using PagedList.Mvc
+@model IEnumerable<YLCShopping.Models.OrderHeader>
+
+@{
+    ViewBag.Title = "Ordermanagement";
+    Layout = "~/Views/Shared/_Layout-Admin.cshtml";
+}
+
+@section scripts{
+    <script type="text/javascript" src=" @Url.Content("~/Scripts/jquery.unobtrusive-ajax.min.js")"></script>
+
+    <script src="@Url.Content("~/Scripts/jquery-3.3.1.min.js")"></script>
+}
+
+<script type="text/javascript">
+    function SuccessdShow(data) {
+        alert('merchandise' + data + 'delete successful！');
+        location.reload(true);
+    }
+    function FailuredShow(data) {
+        alert('merchandise' + data + 'delete failure');
+        location.reload(true);
+    }
+    function SuccessfShow(data) {
+        alert('merchandise' + data + 'deliver successful');
+        location.reload(true);
+    }
+    function FailurefShow(data) {
+        alert('merchandise' + data + 'deliver failure');
+        location.reload(true);
+    }
+</script>
+
+<style>
+
+    #myList {
+        line-height: 50px;
+        border-radius: 0px;
+    }
+
+    .list-all {
+        height: 80px;
+        font-size: 24px;
+        background: #222D32;
+        color: white;
+        transition: all 0.3s linear;
+    }
+
+        .list-all:hover {
+            background-color: #4E5465;
+            border-left: 10px solid #e66d5a;
+            color: white;
+        }
+
+    #active {
+        border-style: none;
+        border-left: 10px solid #e66d5a;
+        background-color: #4E5465;
+    }
+
+    #sm-title {
+        width: 100%;
+        background: #F2F2F2;
+        border-left: 10px solid #17A2B8;
+        font-size: 22px;
+        padding: 10px;
+        margin-top: 25px;
+    }
+</style>
+
+<div style="width:15%;height: calc(100vh - 80px);float:left;background-color:#222d32;">
+    <div class="list-group" id="myList" role="tablist">
+        @Html.ActionLink("main page", "Index", "Admin", new { @class = "list-group-item list-group-item-action list-all" })
+        @Html.ActionLink("user", "Users", "Admin", new { @class = "list-group-item list-group-item-action list-all" })
+        @Html.ActionLink("order", "Ordermanagement", "Admin", new { @class = "list-group-item list-group-item-action active list-all", @id = "active" })
+        @Html.ActionLink("merchandise", "Products", "Admin", new { @class = "list-group-item list-group-item-action list-all" })
+        @Html.ActionLink("about", "AboutMe", "Admin", new { @class = "list-group-item list-group-item-action list-all" })
+    </div>
+</div>
+<div style="float:left;margin-left:30px;width:80%;">
+    <h2 id="sm-title">order</h2>
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">all oders</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">delivered</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">undeliver</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact2" role="tab" aria-controls="contact2" aria-selected="false">add to cart</a>
+        </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>
+                            picture
+                        </th>
+                        <th>
+                            Order Name
+                        </th>
+                        <th>
+                            Merchandise Categories
+                        </th>
+                        <th>
+                            Merchandise Productor
+                        </th>
+                        <th>
+                            Quantity
+                        </th>
+                        <th>
+                            Total Price
+                        </th>
+                        <th>
+                            Deliver or not
+                        </th>
+                        <th>
+                            Operation
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        string data1 = "";
+                        if (item.Memo == "")
+                        {
+                            data1 = "not yet";
+                        }
+                        else
+                        {
+                            data1 = item.Memo;
+                        }
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.MemberAddress.Member.Name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.MemberAddress.ContactName)
+                            </td>
+                            <td class="d-inline-block text-truncate" style="max-width: 250px;">
+                                @Html.DisplayFor(modelItem => item.MemberAddress.ContactAddress)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.MemberAddress.ContactPhoneNo)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.TotalPrice)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.BuyOn)
+                            </td>
+                            <td>
+                                @data1
+                            </td>
+                            <td>
+                                @Html.ActionLink("about the merchandise", "Orderdetails", new { id = item.Id })
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <link href="~/Content/PagedList.css" rel="stylesheet" />
+            @{
+                var data = Model as IPagedList<YLCShopping.Models.OrderHeader>;
+            }
+            @data.Count / @data.PageSize things，@data.PageCount pages in all，it's @data.PageNumber now
+            @Html.PagedListPager(list: data, generatePageUrl: page => Url.Action("Ordermanagement", new { p = page }))
+        </div>
+        <div class="tab-pane fade pre-scrollable" id="profile" role="tabpanel" aria-labelledby="profile-tab" style="max-height:650px">
+            <table class="table table-striped">
+                <tr>
+                    <th>
+                        Product picture
+                    </th>
+                    <th>
+                        subscriber
+                    </th>
+                    <th>
+                        addressee
+                    </th>
+                    <th>
+                        Delivery address
+                    </th>
+                    <th>
+                        Recipient's contact information
+                    </th>
+                    <th>
+                        Order name
+                    </th>
+                    <th>
+                        Commodity category
+                    </th>
+                    <th>
+                        Commodity manufacturer
+                    </th>
+                    <th>
+                        Purchase quantity
+                    </th>
+                    <th>
+                        Gross commodity price
+                    </th>
+                    <th>
+                        Order note
+                    </th>
+                    <th>
+                        Order express number
+                    </th>
+                    <th>
+                        Controls
+                    </th>
+                </tr>
+
+                @foreach (var item in (IEnumerable<YLCShopping.Models.OrderDetail>)ViewData["Shippedorders"])
+                {
+                    string data2 = "";
+                    if (item.OrderHeader.Memo == "")
+                    {
+                        data2 = "not yet";
+                    }
+                    else
+                    {
+                        data2 = item.OrderHeader.Memo;
+                    }
+                    <tr>
+                        <td>
+                            @if (item.Product.ImageData != null)
+                            {
+                                <div class="pull-left" style="margin-right: 10px">
+                                    <img class="img-thumbnail" width="75" height="75"
+                                         src="@Url.Action("GetImage", "Home",
+                new { item.Product.Id })" />
+                                </div>
+                            }
+                            else
+                            {
+                                @Html.Label("not yet");
+                            }
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.OrderHeader.MemberAddress.Member.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.OrderHeader.MemberAddress.ContactName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.OrderHeader.MemberAddress.ContactAddress)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.OrderHeader.MemberAddress.ContactPhoneNo)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Product.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Product.ProductCategory.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Product.Made)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Amount)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Price)
+                        </td>
+                        <td>
+                            @data2
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Shipmentnumber)
+                        </td>
+                        <td></td>
+                    </tr>
+                }
+            </table>
+            <link href="~/Content/PagedList.css" rel="stylesheet" />
+            @{
+                var data22 = (IEnumerable<YLCShopping.Models.OrderDetail>)ViewData["Shippedorders"] as IPagedList<YLCShopping.Models.OrderDetail>;
+            }
+            @data.Count / @data.PageSize things，@data.PageCount pages in all，it's @data.PageNumber now
+            @Html.PagedListPager(list: data22, generatePageUrl: page => Url.Action("Ordermanagement", new { p1 = page }))
+        </div>
+    <div class="tab-pane fade pre-scrollable" id="profile" role="tabpanel" aria-labelledby="profile-tab" style="max-height:650px">
+        <table class="table table-striped">
+            <tr>
+                <th>
+                    Product picture
+                </th>
+                <th>
+                    subscriber
+                </th>
+                <th>
+                    addressee
+                </th>
+                <th>
+                    Delivery address
+                </th>
+                <th>
+                    Recipient's contact information
+                </th>
+                <th>
+                    Order name
+                </th>
+                <th>
+                    Commodity category
+                </th>
+                <th>
+                    Commodity manufacturer
+                </th>
+                <th>
+                    Purchase quantity
+                </th>
+                <th>
+                    Gross commodity price
+                </th>
+                <th>
+                    Order note
+                </th>
+                <th>
+                    Order express number
+                </th>
+                <th>
+                    Controls
+                </th>
+            </tr>
+
+            @foreach (var item in (IEnumerable<YLCShopping.Models.OrderDetail>)ViewData["Unshippedorders"])
+            {
+                string data3 = "";
+                if (item.OrderHeader.Memo == "")
+                {
+                    data3 = "not yet";
+                }
+                else
+                {
+                    data3 = item.OrderHeader.Memo;
+                }
+                <tr>
+                    <td>
+                        @if (item.Product.ImageData != null)
+                        {
+                            <div class="pull-left" style="margin-right: 10px">
+                                <img class="img-thumbnail" width="75" height="75"
+                                     src="@Url.Action("GetImage", "Home",new { item.Product.Id })" />
+                            </div>
+                        }
+                        else
+                        {
+                            @Html.Label("not yet");
+                        }
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OrderHeader.MemberAddress.Member.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OrderHeader.MemberAddress.ContactName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OrderHeader.MemberAddress.ContactAddress)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OrderHeader.MemberAddress.ContactPhoneNo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Product.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Product.ProductCategory.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Product.Made)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Amount)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Price)
+                    </td>
+                    <td>
+                        @data3
+                    </td>
+                    <td>
+                        @Ajax.ActionLink("delete", "Deleteorder", new { id = item.Id }, new AjaxOptions
+          {
+              HttpMethod = "Post",
+              OnSuccess = "SuccessdShow",
+              OnFailure = "FailuredShow"
+          }) ||
+                        @Ajax.ActionLink("deliver", "GoodsShipment", new { id = item.Id }, new AjaxOptions
+                   {
+                       HttpMethod = "Post",
+                       OnSuccess = "SuccessfShow",
+                       OnFailure = "FailurefShow"
+                   })
+                    </td>
+                </tr>
+            }
+
+        </table>
+        @{
+            var data33 = (IEnumerable<YLCShopping.Models.OrderDetail>)ViewData["Unshippedorders"] as IPagedList<YLCShopping.Models.OrderDetail>;
+        }
+        @data33.Count / @data33.PageSize things，@data33.PageCount pages，@data33.PageNumber page now
+        @Html.PagedListPager(list: data33, generatePageUrl: page => Url.Action("Ordermanagement", new { p2 = page }))
+    </div>
+    <div class="tab-pane fade pre-scrollable" id="contact2" role="tabpanel" aria-labelledby="contact-tab" style="max-height:650px">
+        <table class="table table-striped">
+            <tr>
+                <th> Product picture </th>
+                <th> Add user </th>
+                <th> Product name </th>
+                <th> Product Category </th>
+                <th> Product manufacturer </th>
+                <th> Unit price </th>
+                <th> Quantity </th>
+                <th> Subtotal </th>
+            </tr>
+            @foreach (var item in (IEnumerable<YLCShopping.Models.Cart>)ViewData["AddShoppingCart"])
+            {
+                <tr>
+                    <td>
+                        @if (item.Product.ImageData != null)
+                        {
+                            <div class="pull-left" style="margin-right: 10px">
+                                <img class="img-thumbnail" width="75" height="75"
+                                     src="@Url.Action("GetImage", "Home",new { item.Product.Id })" />
+                            </div>
+                        }
+                        else
+                        {
+                            @Html.Label("not yet");
+                        }
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Member.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Product.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Product.ProductCategory.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Product.Made)
+                    </td>
+                    <td>
+                        ¥ @Html.DisplayFor(modelItem => item.Product.Price)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Amount)
+                    </td>
+                    <td>
+                        ¥ @(item.Amount * item.Product.Price)
+                    </td>
+
+                </tr>
+            }
+        </table>
+        @{
+            var data44 = (IEnumerable<YLCShopping.Models.Cart>)ViewData["AddShoppingCart"] as IPagedList<YLCShopping.Models.Cart>;
+        }
+        @data44.Count / @data44.PageSize things，@data44.PageCount pages in all，it's @data44.PageNumber page now
+        @Html.PagedListPager(list: data44, generatePageUrl: page => Url.Action("Ordermanagement", new { p3 = page }))
+    </div>
+</div>
+</div>

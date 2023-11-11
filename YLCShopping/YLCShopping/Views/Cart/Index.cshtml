@@ -1,0 +1,172 @@
+﻿@model List<YLCShopping.Models.Cart>
+@{
+    var ajaxOption = new AjaxOptions()
+    {
+        OnSuccess = "RemoveCartSuccess()",
+        OnFailure = "RemoveCartFailure()",
+        Confirm = "Are you sure you want to remove this item from your shopping cart?",
+        HttpMethod = "Post"
+    };
+}
+@section scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+    <script type="text/javascript">
+        function RemoveCartSuccess() {
+            alert('Successfully removed shopping cart item');
+            location.reload();
+        }
+        function RemoveCartFailure(xhr) {
+            alert('Failed to remove shopping cart item (HTTP status code:' + xhr.status + ')');
+        }
+        function checkCart() {
+
+
+
+        }
+    </script>
+}
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="height:60px;">
+    <a class="navbar-brand" href="Index" style="width:180px;font-size:30px;">【bowl buying】</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll" style="max-height: 100px;">
+            <li class="nav-item">
+                &nbsp &nbsp@*
+                @if (User.Identity.IsAuthenticated)
+                {
+                    int id = (int)Session["memberid"];
+                    <div class="nav-link" style="width:330px;">
+                        @if (id != 0)
+                        {
+                            <img onclick="location.href = '@Url.Action("Index","AboutMember")';" class="img-circle image-responsive" style="float:left;margin-right:5px; width:40px;height:40px;margin-top:0px;border-radius:50%;cursor:pointer;" src="@Url.Action("GetImage", "Member",new { id })" />
+
+                        }
+                        else
+                        {
+
+                            <img onclick="location.href = '@Url.Action("Index","AboutMember")';" class="img-circle image-responsive " style="float: left; width: 64px; height: 64px; margin-top: 0px; cursor: pointer;" src="~/Content/Images/Logo.png" />
+                        }
+
+                        <div class="dropdown" style="float:left;margin-top:0px;">
+                            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false">
+                                <span style="cursor: pointer;"> hello，@Session["name"] </span>&nbsp;
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="/AboutMember/Index">personal center</a>
+                                <a class="dropdown-item" href="#">fix password</a>
+                                <a class="dropdown-item" href="/Member/Logout">log out</a>
+                            </div>
+                        </div>
+                    </div>
+
+                }
+                else
+                {
+                    <div class="nav-link" style="margin-left: 50px;">
+                        @if (Session["name"] != null)
+                        {
+                            @Session["name"] ;
+                            <span>please</span><a href="/Member/Login"> login</a> <span>or</span> <a href="/Member/Register">register</a>
+                        }
+                    </div>
+
+                }*@
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/Home/Index" style="margin-top:12%;width:60px;font-size:20px;">main page <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/Home/ProductList" style="margin-left:70px;margin-top:4%;width:100px;font-size:20px;">class</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/Cart/Index" style="margin-left:70px;margin-top:4%;width:80px;font-size:20px;">cater</a>
+            </li>
+        </ul>
+        @using (Html.BeginForm("UpdateAmount", "Cart"))
+        {
+            <div class="d-flex">
+                <input class="form-control mr-2" name="search" style="width:350px;" type="search" placeholder="Please enter product name or manufacturer to find" aria-label="Search">
+                <button class="btn btn-outline-success" style="width:60px;" type="submit">search</button>
+            </div>
+        }
+    </div>
+</nav>
+
+
+@using (Html.BeginForm("UpdateAmount", "Cart"))
+{
+
+
+
+    <div style="float:left;width:75%;height:600px;margin-top:30px;border-radius:15px;margin-left:15%;">
+        <h2>cater list</h2>
+
+        <table class="table table-striped">
+            <tr>
+                <th>picture</th>
+                <th>name</th>
+                <th>price</th>
+                <th>number</th>
+                <th>total</th>
+                <th>operation</th>
+            </tr>
+            @{ decimal subTotal = 0; }
+            @for (int i = 0; i < Model.Count; i++)
+            {
+                // 计算购买商品总价
+                subTotal += Model[i].Product.Price * Model[i].Amount;
+
+                // 选择商品数量的选单只能选择 1 ~ 10
+                var ddlAmountList = new SelectList(Enumerable.Range(1, 10), Model[i].Amount);
+
+                @Html.HiddenFor(modelItem => Model[i].Product.Id)
+
+                <tr>
+                    <td>
+                        @if (Model[i].Product.ImageData != null)
+                        {
+                            <div class="pull-left" style="margin-right: 10px">
+                                <img class="img-thumbnail" width="75" height="75"
+                                     src="@Url.Action("GetImage", "Home",
+                new { Model[i].Product.Id })" />
+                            </div>
+                        }
+                        else
+                        {
+                            @Html.Label("not yet");
+                        }
+                    </td>
+                    <td onclick="location.href = '@Url.Action("ProductDetail"+"/"+Model[i].Product.Id, "Home")';">
+                        <font style="color:blue;cursor:pointer;">
+
+                            @Html.DisplayFor(modelItem => Model[i].Product.Name)
+                        </font>
+                    </td>
+                    <td>NT$ @(Model[i].Product.Price)</td>
+                    <td>@Html.DropDownListFor(modelItem => Model[i].Amount, ddlAmountList)</td>
+                    <td>NT$ @(Model[i].Product.Price * Model[i].Amount)</td>
+                    <td>
+                        @Ajax.ActionLink("delete", "Remove", new { ProductId = Model[i].Product.Id }, ajaxOption)
+                    </td>
+                </tr>
+            }
+        </table>
+        <p style="float:right;margin-left:100px;">
+            <input type="submit" value="renew" class="btn btn-info" />
+            &nbsp;&nbsp;&nbsp;
+            @*订单金额为零，不能提交提单*@
+            @if (subTotal != 0)
+            {
+                <input type="button" value="complete order" class="btn btn-info"
+                       onclick="location.href = '@Url.Action("Complete", "Order")';" />
+
+            }
+        </p>
+
+    </div>
+}

@@ -1,0 +1,128 @@
+﻿@model YLCShopping.Models.Member
+
+@{
+    ViewBag.Title = "fix";
+    Layout = "~/Views/Shared/_Layout-Admin.cshtml";
+}
+
+<style>
+
+
+    #myList {
+        line-height: 50px;
+        border-radius: 0px;
+    }
+
+    .list-all {
+        height: 80px;
+        font-size: 24px;
+        background: #222D32;
+        color: white;
+        transition: all 0.3s linear;
+    }
+
+        .list-all:hover {
+            background-color: #4E5465;
+            border-left: 10px solid #e66d5a;
+            color: white;
+        }
+
+    #active {
+        border-style: none;
+        border-left: 10px solid #e66d5a;
+        background-color: #4E5465;
+    }
+
+    #sm-title {
+        width: 100%;
+        background: #F2F2F2;
+        border-left: 10px solid #17A2B8;
+        font-size: 22px;
+        padding: 10px;
+        margin-top: 25px;
+    }
+</style>
+
+@using (Html.BeginForm("AdminUserEdit", "Admin",
+       FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div style="width:15%;height: calc(100vh - 80px);float:left;background-color:#222d32;">
+        <div class="list-group" id="myList" role="tablist">
+            @Html.ActionLink("main page", "Index", "Admin", new { @class = "list-group-item list-group-item-action list-all" })
+            @Html.ActionLink("user", "Users", "Admin", new { @class = "list-group-item list-group-item-action active list-all", @id = "active" })
+            @Html.ActionLink("order", "Ordermanagement", "Admin", new { @class = "list-group-item list-group-item-action list-all" })
+            @Html.ActionLink("merchandise", "Products", "Admin", new { @class = "list-group-item list-group-item-action list-all" })
+            @Html.ActionLink("about", "AboutMe", "Admin", new { @class = "list-group-item list-group-item-action list-all" })
+        </div>
+    </div>
+    @*<h4>请输入用户信息</h4>*@
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div class="form-group" style="margin-left:15px;width:290px;margin-top:50px;">
+        <p>user picture</p>
+        <div class="input-group mb-1">
+            <div class="custom-file" href='javascript:;'>
+                <input name="image" type="file" onchange='$("#upload-file-info").html($(this).val());' class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                <label class="custom-file-label" id="upload-file-info">select picture</label>
+            </div>
+        </div>
+    </div>
+    <div style="float:left;margin-left:30px;width:80%;">
+        <h2 id="sm-title">fix</h2>
+        <div class="form-horizontal" style="margin-left:35%;">
+            @*<h4>Member</h4>*@
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @Html.HiddenFor(model => model.Id)
+
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-6">
+                    can't fix
+                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-4">
+                    @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Nickname, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-4">
+                    @Html.EditorFor(model => model.Nickname, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Nickname, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.RegisterOn, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-4">
+                    @Html.EditorFor(model => model.RegisterOn, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.RegisterOn, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-4" style="margin-left:25px;">
+                    <input type="submit" value="save" class="btn btn-info" />
+                    &nbsp;&nbsp;&nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+                    <div class="btn btn-info" onclick="javascript:history.go(-1);">返回</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+}
+
+@*<div>
+        @Html.ActionLink("返回", "Users")
+    </div>*@
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

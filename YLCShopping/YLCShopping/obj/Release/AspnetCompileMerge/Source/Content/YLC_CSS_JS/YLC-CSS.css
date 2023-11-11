@@ -1,0 +1,51 @@
+﻿body {
+
+}
+.admin-login {
+    background-color: #FFFFFF;
+    border-radius:15px;
+    width: 300px;
+    height: 350px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -175px;
+    margin-top: -200px;
+}
+.Users-login {
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    width: 300px;
+    height: 350px;
+    position: absolute;
+    left: 80%;
+    top: 50%;
+    margin-left: -175px;
+    margin-top: -200px;
+    padding:10px 10px 10px 10px;
+}
+.Users-Register {
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    width: 600px;
+    height: 500px;
+    position: absolute;
+    left: 45%;
+    top: 50%;
+    margin-left: -175px;
+    margin-top: -290px;
+    padding: 10px 10px 10px 145px;
+}
+.Tximg {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.ClientHead{
+    height:60px;
+}
+

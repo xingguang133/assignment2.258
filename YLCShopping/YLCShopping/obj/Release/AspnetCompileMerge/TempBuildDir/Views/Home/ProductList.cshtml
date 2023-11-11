@@ -1,0 +1,209 @@
+﻿@using PagedList
+@using PagedList.Mvc
+@model IEnumerable<YLCShopping.Models.Product>
+@section scripts{
+    <script type="text/javascript" src=" @Url.Content("~/Scripts/jquery.unobtrusive-ajax.js")"></script>
+}
+
+@{
+    var ajaxOption = new AjaxOptions()
+    {
+        OnSuccess = "AddToCartSuccess",
+        OnFailure = "AddToCartFailure",
+        HttpMethod = "Post"
+    };
+}
+<script type="text/javascript">
+    function AddToCartSuccess() {
+        alert('加入购物车成功');
+    }
+    function AddToCartFailure(xhr) {
+        alert('加入购物车失败 (HTTP 状态码: ' + xhr.status + ')');
+    }
+    function MTC(rt) {
+        rt.style.backgroundColor = "#00BFFF";
+    }
+    function mtc2(mt) {
+        mt.style.backgroundColor = "white";
+    }
+</script>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="height:60px;">
+        <a class="navbar-brand" href="Index" style="width:180px;font-size:30px;">YLC-Shopping</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll" style="max-height: 100px;">
+                <li class="nav-item">
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        int id = (int)Session["memberid"];
+                        <div class="nav-link" style="width:330px;">
+                            @if (id != 0)
+                            {
+                                <img onclick="location.href = '@Url.Action("Index","AboutMember")';" class="img-circle image-responsive" style="float:left;margin-right:5px; width:40px;height:40px;margin-top:0px;border-radius:50%;cursor:pointer;" src="@Url.Action("GetImage", "Member",new { id })" />
+
+                            }
+                            else
+                            {
+
+                                <img onclick="location.href = '@Url.Action("Index","AboutMember")';" class="img-circle image-responsive " style="float: left; width: 64px; height: 64px; margin-top: 0px; cursor: pointer;" src="~/Content/Images/Logo.png" />
+                            }
+                            @*<a href="/Member/Logout" style="float:right;"> 注销</a>*@
+
+                            <div class="dropdown" style="float:left;margin-top:0px;">
+                                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false">
+                                    <span @*onclick="location.href='/AboutMember/Index'"*@ style="cursor: pointer;"> 你好，@Session["name"] </span>&nbsp;
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <a class="dropdown-item" href="/AboutMember/Index">个人中心</a>
+                                    <a class="dropdown-item" role="button" data-target="#myModal" data-toggle="modal">
+                                        修改密码
+                                    </a>
+                                    <a class="dropdown-item" href="/Member/Logout">退出</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    }
+                    else
+                    {
+                        <div class="nav-link" style="margin-left:50px;">
+                            @Session["name"] &nbsp;
+                            亲，请<a href="/Member/Login"> 登录</a>免费注册
+                        </div>
+                    }
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/Home/Index" style="margin-top:12%;width:60px;font-size:20px;">主页 <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/Home/ProductList" style="margin-left:70px;margin-top:4%;width:100px;font-size:20px;">商品分类</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Cart/Index" style="margin-left:70px;margin-top:4%;width:80px;font-size:20px;">购物车</a>
+                </li>
+            </ul>
+            @using (Html.BeginForm("ProductList", "Home"))
+            {
+                <div class="d-flex">
+                    <input class="form-control mr-2" name="search" style="width:350px;" type="search" placeholder="请输入商品名称或制造商查找" aria-label="Search">
+                    <button class="btn btn-outline-success" style="width:60px;" type="submit">查找</button>
+                </div>
+            }
+        </div>
+    </nav>
+
+    <!--fade 淡入淡出-->
+    <div class="modal fade" id="myModal" aria-labelledby="myModallabel" aria-hidden="true" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="myModallabel">修改密码完成后需要再次邮箱验证</h5>
+                </div>
+                @using (Html.BeginForm("PasswordEdit", "Member", new { id = (int)Session["memberid"] }))
+                {
+                    @*<form action="Admin/Products" id="formData" class="form-horizontal">*@
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <div class="col-lg-9">
+                                <input type="text" value="" name="passwordE" placeholder="输入您的新密码" class="form-control">
+                                <br />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-default" type="button" data-dismiss="modal">取消</button>
+                        <button class="btn btn-success" type="submit" onclick="">修改</button>
+                    </div>
+                    @*</form>*@
+                }
+            </div>
+        </div>
+    </div>
+
+
+    <div class="overflow-auto" style="float:left;width:18%;height: 800px;background-color:#E8E8E8;margin-top:30px;border-radius:15px;">
+        <ul style="margin:0 auto">
+            <li onmouseover="MTC(this)" onmouseout="mtc2(this)" onclick="location.href = '/Home/ProductList';" class="list-group-item d-flex justify-content-between align-items-center" style="border-radius:10px;margin-top:10px;width:200px;padding-left:60px;cursor:pointer;">
+                <div>所有商品</div>
+                @*<a href="/Home/ProductList">所有商品</a>*@
+            </li>
+
+            @foreach (var item in (IEnumerable<YLCShopping.Models.ProductCategory>)ViewData["toedit"])
+            {
+                <li onmouseover="MTC(this)" onmouseout="mtc2(this)" onclick="location.href = '@Url.Action("ProductList"+"/"+item.Id,"Home")';" class="list-group-item d-flex justify-content-between align-items-center" style="border-radius:10px;margin-top:10px;width:200px;padding-left:60px;cursor:pointer;">
+                    <div>@item.Name</div>
+                    @*@Html.ActionLink(item.Name, "ProductList", new { id = item.Id })*@
+                </li>
+            }
+        </ul>
+
+    </div>
+
+
+    <div style="float:left;width:65%;height:600px;margin-top:30px;border-radius:15px;margin-left:5%;">
+        @if (Model.ToList().Count != 0)
+        {
+            <h3>您正在浏览【@Model.First().ProductCategory.Name】分类的商品：</h3>
+            <div class="pre-scrollable" style="max-height:700px;width:1150px">
+                <table class="table table-striped">
+                    <tr>
+                        <th>商品图片</th>
+                        <th>@Html.DisplayNameFor(model => model.Name)</th>
+                        <th>@Html.DisplayNameFor(model => model.Made)</th>
+                        <th>@Html.DisplayNameFor(model => model.Description)</th>
+                        <th>@Html.DisplayNameFor(model => model.Price)</th>
+                        <th>操作</th>
+                    </tr>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @if (item.ImageData != null)
+                                {
+                                    <div class="pull-left" style="margin-right: 10px">
+                                        <img class="img-thumbnail" width="75" height="75"
+                                             src="@Url.Action("GetImage", "Home",
+                new {item.Id })" />
+                                    </div>
+                                }
+                                else
+                                {
+                                    @Html.Label("暂无图片");
+                                }
+                            </td>
+                            <td>@Html.ActionLink(item.Name, "ProductDetail", new { id = item.Id })</td>
+                            <td>@Html.DisplayFor(modelItem => item.Made)</td>
+                            <td class="d-inline-block text-truncate" style="max-width: 250px;">@Html.DisplayFor(modelItem => item.Description)</td>
+                            <td>
+                                <font style="color:red;font-size:20px;">¥ @Html.DisplayFor(modelItem => item.Price)</font>
+
+
+                            </td>
+                            <td>@Ajax.ActionLink("加入购物车", "AddToCart", "Cart", new { ProductId = item.Id }, ajaxOption)</td>
+                        </tr>
+                    }
+                </table>
+            </div>
+
+        }
+        else
+        {
+            <h1>敬请期待上架</h1>
+        }
+
+
+        <link href="~/Content/PagedList.css" rel="stylesheet" />
+
+        @{
+            var data = Model as IPagedList<YLCShopping.Models.Product>;
+        }
+        @data.Count / @data.PageSize 条记录，共 @data.PageCount 页，当前第 @data.PageNumber 页
+        @Html.PagedListPager(list: data,
+            generatePageUrl: page => Url.Action("ProductList", new { p = page }))
+    </div>
+
+</body>

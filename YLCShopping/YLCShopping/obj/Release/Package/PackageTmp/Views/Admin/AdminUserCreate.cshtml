@@ -1,0 +1,143 @@
+﻿@model YLCShopping.Models.Member
+
+@{
+  ViewBag.Title = "AdminUserCreate";
+  Layout = "~/Views/Shared/_Layout-Admin.cshtml";
+}
+
+<style>
+    .list-group {
+    }
+
+    #myList {
+        line-height: 50px;
+        border-radius: 0px;
+    }
+
+    .list-all {
+        height: 80px;
+        font-size: 24px;
+        background: #222D32;
+        color: white;
+        transition: all 0.3s linear;
+    }
+
+        .list-all:hover {
+            background-color: #4E5465;
+            border-left: 10px solid #e66d5a;
+            color: white;
+        }
+
+    #active {
+        border-style: none;
+        border-left: 10px solid #e66d5a;
+        background-color: #4E5465;
+    }
+
+    #sm-title {
+        width: 100%;
+        background: #F2F2F2;
+        border-left: 10px solid #17A2B8;
+        font-size: 22px;
+        padding: 10px;
+        margin-top: 25px;
+    }
+</style>
+
+@using (Html.BeginForm("AdminUserCreate", "Admin",
+       FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+  @Html.AntiForgeryToken()
+  <div style="width:15%;height: calc(100vh - 80px);float:left;background-color:#222d32;">
+      <div class="list-group" id="myList" role="tablist">
+          @Html.ActionLink("主页", "Index", "Admin", new { @class = "list-group-item list-group-item-action list-all" })
+          @Html.ActionLink("用户管理", "Users", "Admin", new { @class = "list-group-item list-group-item-action active list-all", @id = "active" })
+          @Html.ActionLink("订单管理", "Ordermanagement", "Admin", new { @class = "list-group-item list-group-item-action list-all" })
+          @Html.ActionLink("商品管理", "Products", "Admin", new { @class = "list-group-item list-group-item-action list-all" })
+          @Html.ActionLink("关于", "AboutMe", "Admin", new { @class = "list-group-item list-group-item-action list-all" })
+      </div>
+  </div>
+
+  <div style="float:left;width:80%;margin-left:30px;">
+    <h2 id="sm-title">新建用户</h2>
+    <div class="form-horizontal" style="margin-left:35%;">
+
+        @*<h4>请输入用户信息</h4>*@
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group" style="margin-left:15px;width:290px;margin-top:50px;">
+            <p>用户头像</p>
+            <div class="input-group mb-1">
+                <div class="custom-file" href='javascript:;'>
+                    <input name="image" type="file" onchange='$("#upload-file-info").html($(this).val());' class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                    <label class="custom-file-label" id="upload-file-info">选择图片</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group" style="height:60px;margin-bottom:10px;margin-top:20px;">
+            <div>
+                @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+            </div>
+            <div class="col-md-10" style="width:320px;float:left;">
+                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+            <div style="margin-top:7px;float:left;">
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group" style="height:60px;margin-bottom:10px;margin-top:20px;">
+            <div>
+                @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
+            </div>
+            <div class="col-md-10" style="width:320px;float:left;">
+                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+            <div style="margin-top:7px;float:left;">
+                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group" style="height:60px;margin-bottom:10px;margin-top:20px;">
+            <div>
+                @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+            </div>
+            <div class="col-md-10" style="width:320px;float:left;">
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+            <div style="margin-top:7px;float:left;">
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group" style="height:60px;margin-bottom:10px;margin-top:20px;">
+            <div>
+                @Html.LabelFor(model => model.Nickname, htmlAttributes: new { @class = "control-label col-md-2" })
+            </div>
+            <div class="col-md-10" style="width:320px;float:left;">
+                @Html.EditorFor(model => model.Nickname, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+            <div style="margin-top:7px;float:left;">
+                @Html.ValidationMessageFor(model => model.Nickname, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group" style="margin-top:20px;margin-left:45px;">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="创建" class="btn btn-info" />
+                &nbsp;&nbsp;&nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+                <div class="btn btn-info" onclick="javascript:history.go(-1);">返回</div>
+            </div>
+        </div>
+    </div>
+  </div>
+}
+
+@*<div>
+      @Html.ActionLink("Back to List", "Index")
+  </div>*@
+
+@section Scripts {
+  @Scripts.Render("~/bundles/jqueryval")
+}

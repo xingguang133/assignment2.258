@@ -1,0 +1,159 @@
+﻿@model YLCShopping.Models.MemberAddress
+<script type="text/javascript">
+    function AddToOrderSuccess() {
+        alert('提交订单成功');
+    }
+
+</script>
+<script src="~/Content/YLC_CSS_JS/YLC-JS.js"></script>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="height:60px;">
+    <a class="navbar-brand" href="Index" style="width:180px;font-size:30px;">YLC-Shopping</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll" style="max-height: 100px;">
+            <li class="nav-item">
+                @if (User.Identity.IsAuthenticated)
+                {
+                    int id = (int)Session["memberid"];
+                    <div class="nav-link" style="width:330px;">
+                        @if (id != 0)
+                        {
+                            <img onclick="location.href = '@Url.Action("Index","AboutMember")';" class="img-circle image-responsive" style="float:left;margin-right:5px; width:40px;height:40px;margin-top:0px;border-radius:50%;cursor:pointer;" src="@Url.Action("GetImage", "Member",new { id })" />
+
+                        }
+                        else
+                        {
+
+                            <img onclick="location.href = '@Url.Action("Index","AboutMember")';" class="img-circle image-responsive " style="float: left; width: 64px; height: 64px; margin-top: 0px; cursor: pointer;" src="~/Content/Images/Logo.png" />
+                        }
+                        @*<a href="/Member/Logout" style="float:right;"> 注销</a>*@
+
+                        <div class="dropdown" style="float:left;margin-top:0px;">
+                            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false">
+                                <span @*onclick="location.href='/AboutMember/Index'"*@ style="cursor: pointer;"> 你好，@Session["name"] </span>&nbsp;
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a class="dropdown-item" href="/AboutMember/Index">个人中心</a>
+                                <a class="dropdown-item" role="button" data-target="#myModal" data-toggle="modal">
+                                    修改密码
+                                </a>
+                                <a class="dropdown-item" href="/Member/Logout">退出</a>
+                            </div>
+                        </div>
+                    </div>
+
+                }
+                else
+                {
+                    <div class="nav-link" style="margin-left:50px;">
+                        @Session["name"] &nbsp;
+                        亲，请<a href="/Member/Login"> 登录</a>免费注册
+                    </div>
+                }
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/Home/Index" style="margin-top:12%;width:60px;font-size:20px;">主页 <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/Home/ProductList" style="margin-left:70px;margin-top:4%;width:100px;font-size:20px;">商品分类</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/Cart/Index" style="margin-left:70px;margin-top:4%;width:80px;font-size:20px;">购物车</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!--fade 淡入淡出-->
+<div class="modal fade" id="myModal" aria-labelledby="myModallabel" aria-hidden="true" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="myModallabel">修改密码完成后需要再次邮箱验证</h5>
+            </div>
+            @using (Html.BeginForm("PasswordEdit", "Member", new { id = (int)Session["memberid"] }))
+            {
+                @*<form action="Admin/Products" id="formData" class="form-horizontal">*@
+                <div class="modal-body">
+                    <div class="form-group">
+                        <div class="col-lg-9">
+                            <input type="text" value="" name="passwordE" placeholder="输入您的新密码" class="form-control">
+                            <br />
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-default" type="button" data-dismiss="modal">取消</button>
+                    <button class="btn btn-success" type="submit" onclick="">修改</button>
+                </div>
+                @*</form>*@
+            }
+        </div>
+    </div>
+</div>
+
+
+
+<div class="overflow-auto" style="float:left;width:400px;height: 650px;background-color:#E8E8E8;margin-top:30px;border-radius:15px;">
+    @foreach (var item in (IEnumerable<YLCShopping.Models.MemberAddress>)ViewData["Alladdress"])
+    {
+        <div onmouseover="MTC(this)" onmouseout="mtc2(this)"
+             onclick="location.href = '@Url.Action("Complete"+"/"+item.Id,"Order")';"
+             style="padding:10px 10px 10px 10px;margin-left:30px;border-radius:5px;margin-top:10px;width:325px;height:auto;cursor:pointer;background-color:white;">
+            <div style="margin-left:10px;margin-right:10px;">
+                <div>姓名：@item.ContactName</div>
+                <div>电话：@item.ContactPhoneNo</div>
+                <div>地址：@item.ContactAddress</div>
+            </div>
+        </div>
+    }
+
+</div>
+
+<div style="float:left;width:26%;height:600px;margin-top:30px;border-radius:15px;margin-left:18%;">
+    <h2>结帐</h2>
+
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true)
+
+        <fieldset>
+            <form>
+                <h4>请输入送货信息与订单备注</h4>
+                <div class="form-group" style="height:85px;">
+                    <label for="exampleInputEmail1">@Html.LabelFor(model => model.ContactName)</label>
+                    @Html.EditorFor(model => model.ContactName, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.ContactName)
+                </div>
+                <div class="form-group" style="height:85px;">
+                    <label for="exampleInputPassword1">@Html.LabelFor(model => model.ContactPhoneNo)</label>
+                    @Html.EditorFor(model => model.ContactPhoneNo, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.ContactPhoneNo)
+                </div>
+                <div class="form-group" style="height:auto;">
+                    <label for="exampleInputPassword1">@Html.LabelFor(model => model.ContactAddress)</label>
+                    @Html.EditorFor(model => model.ContactAddress, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.ContactAddress)
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">订单备注</label>
+                    <input type="text" class="form-control" name="memo" />
+                </div>
+                <button type="submit" class="btn btn-primary">提交订单</button>
+            </form>
+        </fieldset>
+    }
+    <div class="btn btn-info" style="margin-left:80%;" onclick="javascript:history.go(-1);">返回</div>
+
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+
+</div>
+
+
+

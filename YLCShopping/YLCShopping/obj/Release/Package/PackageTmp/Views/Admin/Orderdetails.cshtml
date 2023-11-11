@@ -1,0 +1,183 @@
+﻿@using PagedList
+@using PagedList.Mvc
+@model IEnumerable<YLCShopping.Models.OrderDetail>
+
+@{
+    /**/
+
+    ViewBag.Title = "订单详情";
+    Layout = "~/Views/Shared/_Layout-Admin.cshtml";
+}
+
+@section scripts{
+    <script type="text/javascript" src=" @Url.Content("~/Scripts/jquery.unobtrusive-ajax.min.js")"></script>
+
+    <script src="@Url.Content("~/Scripts/jquery-3.3.1.min.js")"></script>
+}
+
+<script type="text/javascript">
+    function SuccessdShow(data) {
+        alert('商品' + data + '删除成功！');
+        location.reload(true);
+    }
+    function FailuredShow(data) {
+        alert('商品' + data + '删除失败');
+        location.reload(true);
+    }
+    function SuccessfShow(data) {
+        alert('商品' + data + '发货成功');
+        location.reload(true);
+    }
+    function FailurefShow(data) {
+        alert('商品' + data + '发货失败-已发货');
+        location.reload(true);
+    }
+</script>
+
+<style>
+
+    #myList {
+        line-height: 50px;
+        border-radius: 0px;
+    }
+
+    .list-all {
+        height: 80px;
+        font-size: 24px;
+        background: #222D32;
+        color: white;
+        transition: all 0.3s linear;
+    }
+
+        .list-all:hover {
+            background-color: #4E5465;
+            border-left: 10px solid #e66d5a;
+            color: white;
+        }
+
+    #active {
+        border-style: none;
+        border-left: 10px solid #e66d5a;
+        background-color: #4E5465;
+    }
+
+    #sm-title {
+        width: 100%;
+        background: #F2F2F2;
+        border-left: 10px solid #17A2B8;
+        font-size: 22px;
+        padding: 10px;
+        margin-top: 25px;
+    }
+</style>
+
+<div style="width:15%;height: calc(100vh - 80px);float:left;background-color:#222d32;">
+    <div class="list-group" id="myList" role="tablist">
+        @Html.ActionLink("主页", "Index", "Admin", new { @class = "list-group-item list-group-item-action list-all" })
+        @Html.ActionLink("用户管理", "Users", "Admin", new { @class = "list-group-item list-group-item-action list-all" })
+        @Html.ActionLink("订单管理", "Ordermanagement", "Admin", new { @class = "list-group-item list-group-item-action active list-all", @id = "active" })
+        @Html.ActionLink("商品管理", "Products", "Admin", new { @class = "list-group-item list-group-item-action list-all" })
+        @Html.ActionLink("关于", "AboutMe", "Admin", new { @class = "list-group-item list-group-item-action list-all" })
+    </div>
+</div>
+<div style="float:left;margin-left:30px;width:80%;">
+    <h2 id="sm-title">订单详细信息</h2>
+    <div class="btn btn-info" onclick="javascript:history.go(-1);" style="float:none;margin-bottom:10px;">返回上一步</div>
+
+    <table class="table table-striped pre-scrollable" style="max-height:650px">
+        <tr>
+            <th>
+                商品图片
+            </th>
+            <th>
+                订购商品名称
+            </th>
+            <th>
+                商品类别
+            </th>
+            <th>
+                商品制造商
+            </th>
+            <th>
+                购买数量
+            </th>
+            <th>
+                商品总价
+            </th>
+            <th>
+                是否发货
+            </th>
+            <th>
+                操作
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            string data1 = "";
+            if (item.Shipmentnumber == null)
+            {
+                data1 = "未发货";
+            }
+            else
+            {
+                data1 = "已发货";
+            }
+            <tr>
+                <td>
+                    @if (item.Product.ImageData != null)
+                    {
+                        <div class="pull-left" style="margin-right: 10px">
+                            <img class="img-thumbnail" width="75" height="75"
+                                 src="@Url.Action("GetImage", "Home",
+                new { item.Product.Id })" />
+                        </div>
+                    }
+                    else
+                    {
+                        @Html.Label("暂无图片");
+                    }
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Product.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Product.ProductCategory.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Product.Made)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Amount)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @data1
+                </td>
+                <td>
+                    @Ajax.ActionLink("删除商品订单", "Deleteorder", new { id = item.Id }, new AjaxOptions
+               {
+                   HttpMethod = "Post",
+                   OnSuccess = "SuccessdShow",
+                   OnFailure = "FailuredShow"
+               }) |
+                    @Ajax.ActionLink("发货", "GoodsShipment", new { id = item.Id }, new AjaxOptions
+               {
+                   HttpMethod = "Post",
+                   OnSuccess = "SuccessfShow",
+                   OnFailure = "FailurefShow"
+               })
+                </td>
+            </tr>
+        }
+
+    </table>
+    <link href="~/Content/PagedList.css" rel="stylesheet" />
+    @{
+        var data = Model as IPagedList<YLCShopping.Models.OrderDetail>;
+    }
+    每页 @data.PageSize 条记录，共 @data.PageCount 页，当前第 @data.PageNumber 页
+    @Html.PagedListPager(list: data, generatePageUrl: page => Url.Action("Products", new { p = page }))
+</div>
